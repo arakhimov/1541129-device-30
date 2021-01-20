@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
-* Студент: [Артем Рахимов](https://up.htmlacademy.ru/htmlcss/30/user/1541129).
-* Наставник: `Неизвестно`.
+- Студент: [Артем Рахимов](https://up.htmlacademy.ru/htmlcss/30/user/1541129).
+- Наставник: [Валерий Хаслер](https://htmlacademy.ru/profile/id224163).
 
 ---
 
