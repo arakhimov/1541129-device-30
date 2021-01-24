@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Интернет магазин Device" />
     <meta name="keywords" content="HTML, CSS, JS, Git" />
-    <meta name="author" content="Artem Rakhimov <artemiirakhimov@yandex.ru>" />
+    <!-- убрал фигурные скобки для email -->
+    <meta name="author" content="Artem Rakhimov artemiirakhimov@yandex.ru" />
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="#" />
     <link rel="shortcut icon" href="#" type="image/x-icon" />
@@ -21,6 +22,10 @@
 
       <form action="#" method="GET" class="site-header-search" name="search">
         <label class="site-search">Поиск по сайту</label>
+        <!-- использую автоформатирование в VSCode - если у тега больше 2 атрибутов -
+        то каждый атрибут переносятся на отдельную строку, также автоформатирование на 
+        максимальную длину строки - насколько я знаю, общие требования по форматированию 
+        устанавливаюся для всей команды - если это критично, то исправлю -->
         <input
           type="text"
           class="site-search"
@@ -42,10 +47,11 @@
       </ul>
 
       <nav class="header-nav">
-        <ul class="content-menu">
+        <ul class="site-menu">
           <li>
-            <a class="content-menu-link">Каталог товаров</a>
-            <label for="header-show-submenu" class="content-menu-label">
+            <!-- добавил href на страницу каталога -->
+            <a href="catalog.html" class="site-menu-link">Каталог товаров</a>
+            <label for="header-show-submenu" class="site-menu-label">
               Открыть каталог
             </label>
             <button
@@ -57,43 +63,42 @@
               +
             </button>
           </li>
-          <li><a href="#" class="content-menu-link">Доставка</a></li>
-          <li><a href="#" class="content-menu-link">Гарантия</a></li>
-          <li><a href="#" class="content-menu-link">Контакты</a></li>
+          <li><a href="#" class="site-menu-link">Доставка</a></li>
+          <li><a href="#" class="site-menu-link">Гарантия</a></li>
+          <li><a href="#" class="site-menu-link">Контакты</a></li>
         </ul>
-
-        <section class="header-menu-advanced">
-          <ul class="header-submenu">
-            <li>
-              <a href="catalog.html" class="header-submenu-link">
-                Виртуальная реальность
-              </a>
-            </li>
-            <li>
-              <a href="catalog.html" class="header-submenu-link">
-                Фитнес браслеты
-              </a>
-            </li>
-            <li>
-              <a href="catalog.html" class="header-submenu-link">
-                Квадрокоптер
-              </a>
-            </li>
-            <li>
-              <a href="catalog.html" class="header-submenu-link">
-                Моноподы для селфи
-              </a>
-            </li>
-            <li>
-              <a href="catalog.html" class="header-submenu-link">Умные часы</a>
-            </li>
-            <li>
-              <a href="catalog.html" class="header-submenu-link">Экшн-камеры</a>
-            </li>
-          </ul>
-        </section>
       </nav>
     </header>
+
+    <!-- подменю -->
+    <section class="site-menu-advanced">
+      <ul class="header-submenu">
+        <li>
+          <a href="catalog.html" class="header-submenu-link">
+            Виртуальная реальность
+          </a>
+        </li>
+        <li>
+          <a href="catalog.html" class="header-submenu-link">
+            Фитнес браслеты
+          </a>
+        </li>
+        <li>
+          <a href="catalog.html" class="header-submenu-link"> Квадрокоптер </a>
+        </li>
+        <li>
+          <a href="catalog.html" class="header-submenu-link">
+            Моноподы для селфи
+          </a>
+        </li>
+        <li>
+          <a href="catalog.html" class="header-submenu-link">Умные часы</a>
+        </li>
+        <li>
+          <a href="catalog.html" class="header-submenu-link">Экшн-камеры</a>
+        </li>
+      </ul>
+    </section>
 
     <main class="main">
       <h1 class="visually-hidden">Интернет-магазин Device</h1>
@@ -138,8 +143,8 @@
                 alt="Самая длинная селфи-палка"
                 class="promo-img"
               />
-              <h3 class="visually-hidden">Самая длинная селфи-палка</h3>
-              <p class="promo-product-text">Делай селфи как Бен Стилер!</p>
+              <!-- убрал скрытые заголовки -->
+              <h3 class="promo-product-text">Делай селфи как Бен Стилер!</h3>
               <p class="promo-product-description">
                 Самая длинная палка для селфи доступна в нашем магазине. Восемь
                 (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
@@ -166,8 +171,7 @@
                 alt="Фитнес браслеты для здоровья"
                 class="promo-img"
               />
-              <h3 class="visually-hidden">Фитнес браслеты для здоровья</h3>
-              <p class="promo-product-text">Худееем правильно!</p>
+              <h3 class="promo-product-text">Худееем правильно!</h3>
               <p class="promo-product-description">
                 Мотивирующие фитнес браслеты помогут найти в себе силы не
                 пропусить занятия и соблюдать диету.
@@ -176,13 +180,9 @@
               <table class="promo-product-features">
                 <tr>
                   <td>48 часов</td>
-                  <td></td>
-                  <td></td>
                 </tr>
                 <tr>
                   <th>Без подзарядки</th>
-                  <th></th>
-                  <th></th>
                 </tr>
               </table>
             </article>
@@ -194,25 +194,23 @@
                 alt="Необычный квадрокоптер"
                 class="promo-img"
               />
-              <h3 class="visually-hidden">Необычный квадрокоптер</h3>
-              <p class="promo-product-text">
+              <h3 class="promo-product-text">
                 Порхает как бабочка, жалит как пчела.
-              </p>
+              </h3>
               <p class="promo-product-description">
                 Этот обычный, на первый взгляд, квадрокоптер оснащен мощным
                 лазером, замаскированным под обычную камеру.
               </p>
               <a href="#" class="promo-product-link">Подробнее</a>
               <table class="promo-product-features">
+                <!-- удалил пустые элементы -->
                 <tr>
                   <td>800 м</td>
                   <td>50 м</td>
-                  <td></td>
                 </tr>
                 <tr>
                   <th>Дальность полёта</th>
                   <th>Радиус поражения</th>
-                  <th></th>
                 </tr>
               </table>
             </article>
@@ -412,26 +410,21 @@
 
       <section class="about-us">
         <h2 class="about-us-title">О нас</h2>
-        <ul class="about-us-list">
-          <li class="about-us-item">
-            <p class="about-us-description">
-              Огромный выбор гаджетов не оставит равнодушным гика, который есть
-              в каждом из нас.
-            </p>
-          </li>
-          <li class="about-us-item">
-            <p class="about-us-description">
-              Мы можем доставить ваш товар в самые отдаленные точки России.
-              DEVICE работает со многими транспортными компаниями:
-            </p>
-            <ul class="about-us-carrier-list">
-              <li>Деловые линии</li>
-              <li>Автотрейдинг</li>
-              <li>ЖелДорЭкспедиция</li>
-            </ul>
-          </li>
+        <!-- убрал лишний список - да, перебор получился) -->
+        <p class="about-us-description">
+          Огромный выбор гаджетов не оставит равнодушным гика, который есть в
+          каждом из нас.
+        </p>
+        <p class="about-us-description">
+          Мы можем доставить ваш товар в самые отдаленные точки России. DEVICE
+          работает со многими транспортными компаниями:
+        </p>
+        <ul class="about-us-carrier-list">
+          <li>Деловые линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a href="#" class="content-link">Подробнее о нас</a>
+        <a href="#" class="site-link">Подробнее о нас</a>
       </section>
 
       <section class="contacts">
@@ -447,21 +440,21 @@
             class="contacts-map"
           />
         </a>
-        <a href="#" class="content-link">Напишите нам</a>
+        <a href="#" class="site-link">Напишите нам</a>
       </section>
     </main>
 
     <footer class="footer">
-      <a class="content-logo-link">
+      <a class="site-logo-link">
         <img
           src="https://via.placeholder.com/150x100"
           alt="Логотип магазина Device"
         />
       </a>
 
-      <ul class="content-options">
-        <li class="content-options-item">
-          <a href="#" class="content-options-link">Войти</a>
+      <ul class="site-options">
+        <li class="site-options-item">
+          <a href="#" class="site-options-link">Войти</a>
         </li>
         <li class="content-options-item">
           <a href="#" class="content-options-link">Сравнить</a>
@@ -481,7 +474,8 @@
 
       <a href="tel:+749549595995" class="footer-tel">Тел.: +7(495) 495-95-95</a>
 
-      <i class="footer-line"></i>
+      <!-- изменил тег i на hr - оставил тег в разметке для сетки при стилизации -->
+      <hr class="footer-line" />
 
       <ul class="footer-social-list">
         <li>
@@ -513,7 +507,11 @@
         </li>
       </ul>
 
-      <a href="#" class="study-center-link">
+      <!-- добавил адрес на страницу интенсива -->
+      <a
+        href="https://htmlacademy.ru/intensive/htmlcss"
+        class="study-center-link"
+      >
         <img
           src="https://via.placeholder.com/150x100"
           alt="HTMLAcademy"
