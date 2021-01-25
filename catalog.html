@@ -57,9 +57,13 @@
 
       <section class="filter">
         <h2 class="filter-title">Фильтр:</h2>
-        <form action="#" method="POST" class="filter-form">
+        <form action="https://echo.htmlacademy.ru/" method="POST" class="filter-form">
           <fieldset class="filter-cost">
             <legend>Стоимость</legend>
+            <label for="cost-min" class="filter-cost-min-label">Начальная цена</label>
+            <input type="text" class="filter-cost-min" id="cost-min" name="cost-min" value="0">
+            <label for="cost-max" class="filter-cost-max-label">Максимальная цена</label>
+            <input type="text" class="filter-cost-max" id="cost-max" name="cost-max" value="3000">
             <input type="range" min="0" max="5000" value="3000" id="filter-cost-field" class="filter-cost-field" name="filter-cost-field"/>
             <label for="filter-cost-field" class="filter-cost-label"></label>
           </fieldset>
@@ -110,9 +114,9 @@
         <header class="devices-header">
           <p class="divices-options">Сортировка</p>
           <ul class="divices-sort-list">
-            <li><button type="button" class="devices-sort-type">По цене</button></li>
-            <li><button type="button" class="devices-sort-type">По типу</button></li>
-            <li><button type="button" class="devices-sort-type">По популярности</button></li>
+            <li><a href="#" class="devices-sort-type">По цене</a></li>
+            <li><a href="#" class="devices-sort-type">По типу</a></li>
+            <li><a href="#" class="devices-sort-type">По популярности</a></li>
           </ul>
           <button type="button" class="devices-sort-method" aria-label="По возростанию" title="По возростанию" disabled></button>
           <button type="button" class="devices-sort-method" aria-label="По убыванию" title="По убыванию"></button>
@@ -166,7 +170,8 @@
       </a>
 
       <ul class="site-options">
-        <li class="site-options-item"><a href="#" class="site-options-link">Войти</a></li>
+        <li class="site-options-item">Валентин Петухов</li>
+        <li class="site-options-item"><a href="#" class="site-options-link">Выйти</a></li>
         <li class="content-options-item"><a href="#" class="content-options-link">Сравнить</a></li>
         <li class="content-options-item"><a href="#" class="content-options-link">Корзина</a></li>
       </ul>
