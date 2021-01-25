@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Интернет магазин Device" />
     <meta name="keywords" content="HTML, CSS, JS, Git" />
-    <!-- убрал фигурные скобки для email -->
     <meta name="author" content="Artem Rakhimov artemiirakhimov@yandex.ru" />
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="#" />
@@ -21,17 +20,17 @@
       </a>
 
       <form action="#" method="GET" class="site-header-search" name="search">
-        <label class="site-search">Поиск по сайту</label>
-        <!-- использую автоформатирование в VSCode - если у тега больше 2 атрибутов -
-        то каждый атрибут переносятся на отдельную строку, также автоформатирование на 
-        максимальную длину строки - насколько я знаю, общие требования по форматированию 
-        устанавливаюся для всей команды - если это критично, то исправлю -->
+        <label for="site-search-field" class="site-search-label">
+          Поиск по сайту
+        </label>
         <input
           type="text"
-          class="site-search"
-          name="site-search"
+          class="site-search-field"
+          name="site-search-field"
+          id="site-search-field"
           placeholder="Поиск по сайту"
         />
+        <button type="submit" class="site-search-submit">Найти</button>
       </form>
 
       <ul class="content-options">
@@ -49,7 +48,6 @@
       <nav class="header-nav">
         <ul class="site-menu">
           <li>
-            <!-- добавил href на страницу каталога -->
             <a href="catalog.html" class="site-menu-link">Каталог товаров</a>
             <label for="header-show-submenu" class="site-menu-label">
               Открыть каталог
@@ -73,7 +71,6 @@
     <main class="main">
       <h1 class="visually-hidden">Интернет-магазин Device</h1>
 
-      <!-- подменю -->
       <section class="site-menu-advanced">
         <ul class="header-submenu">
           <li>
@@ -146,7 +143,6 @@
                 alt="Самая длинная селфи-палка"
                 class="promo-img"
               />
-              <!-- убрал скрытые заголовки -->
               <h3 class="promo-product-text">Делай селфи как Бен Стилер!</h3>
               <p class="promo-product-description">
                 Самая длинная палка для селфи доступна в нашем магазине. Восемь
@@ -206,7 +202,6 @@
               </p>
               <a href="#" class="promo-product-link">Подробнее</a>
               <table class="promo-product-features">
-                <!-- удалил пустые элементы -->
                 <tr>
                   <td>800 м</td>
                   <td>50 м</td>
@@ -413,7 +408,6 @@
 
       <section class="about-us">
         <h2 class="about-us-title">О нас</h2>
-        <!-- убрал лишний список - да, перебор получился) -->
         <p class="about-us-description">
           Огромный выбор гаджетов не оставит равнодушным гика, который есть в
           каждом из нас.
@@ -477,7 +471,6 @@
 
       <a href="tel:+749549595995" class="footer-tel">Тел.: +7(495) 495-95-95</a>
 
-      <!-- изменил тег i на hr - оставил тег в разметке для сетки при стилизации -->
       <hr class="footer-line" />
 
       <ul class="footer-social-list">
@@ -510,7 +503,6 @@
         </li>
       </ul>
 
-      <!-- добавил адрес на страницу интенсива -->
       <a
         href="https://htmlacademy.ru/intensive/htmlcss"
         class="study-center-link"
