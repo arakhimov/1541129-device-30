@@ -1,0 +1,9 @@
+.logotypes-image {
+  filter: grayscale(1);
+  opacity: 0.2;
+}
+
+.logotypes-image:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
