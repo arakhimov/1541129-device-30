@@ -298,19 +298,20 @@
 .promo-table {
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-style: normal;
-  letter-spacing: 0.1em;
 }
 
 .promo-table-row {
   font-weight: 300;
   font-size: 36px;
   line-height: 41.5px;
+  letter-spacing: 0.1em;
 }
 
 .promo-table-header {
   font-weight: 300;
   font-size: 13px;
   line-height: 15px;
+  letter-spacing: 0.1em;
 }
 
 /* device-types */
