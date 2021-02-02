@@ -802,14 +802,12 @@
   cursor: pointer;
 }
 
-.devices-sort-method:disabled {
+.devices-sort-method.sort-active {
   opacity: 0.2;
 }
 
 .devices-sort-method:hover,
-.devices-sort-method:disabled:hover,
-.devices-sort-method:focus,
-.devices-sort-method:disabled:focus {
+.devices-sort-method:focus {
   opacity: 0.4;
 }
 
