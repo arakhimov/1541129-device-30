@@ -15,7 +15,7 @@
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page-body">
-    <header class="header container">
+    <header class="header">
       <a class="content-logo-link content-logo-link_header">
         <img src="img/logo-header.svg" alt="Логотип магазина Device" class="header-logo" width="163" height="35" />
       </a>
@@ -39,9 +39,18 @@
       <nav class="header-nav">
         <ul class="content-menu">
           <li class="content-menu-item">
-            <a href="catalog.html" class="content-link content-link_menu content-link_theme-dark">Каталог товаров</a>
-            <label for="header-show-submenu" class="visually-hidden-label">Открыть каталог</label>
-            <button type="button" name="header-show-submenu" id="header-show-submenu" class="header-show-submenu"></button>
+            <a href="catalog.html" class="content-link content-link_menu">Каталог товаров</a>
+            <button type="button" name="header-show-submenu" aria-label="Открыть каталог" class="header-show-submenu" title="Открыть каталог"></button>
+            <section class="content-menu-advanced visually-hidden">
+              <ul class="content-submenu">
+                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Виртуальная реальность</a></li>
+                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Фитнес браслеты</a></li>
+                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Квадрокоптер</a></li>
+                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Моноподы для селфи</a></li>
+                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Умные часы</a></li>
+                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Экшн-камеры</a></li>
+              </ul>
+            </section>
           </li>
           <li class="content-menu-item"><a href="#" class="content-link content-link_menu">Доставка</a></li>
           <li class="content-menu-item"><a href="#" class="content-link content-link_menu">Гарантия</a></li>
@@ -50,47 +59,38 @@
       </nav>
     </header>
 
-    <main class="main container">
+    <main class="main main_page_index">
       <h1 class="visually-hidden">Интернет-магазин Device</h1>
-
-      <section class="site-menu-advanced">
-        <ul class="site-submenu">
-          <li class="site-submenu-item"><a href="catalog.html" class="site-submenu-link">Виртуальная реальность</a></li>
-          <li class="site-submenu-item"><a href="catalog.html" class="site-submenu-link">Фитнес браслеты</a></li>
-          <li class="site-submenu-item"><a href="catalog.html" class="site-submenu-link">Квадрокоптер</a></li>
-          <li class="site-submenu-item"><a href="catalog.html" class="site-submenu-link">Моноподы для селфи</a></li>
-          <li class="site-submenu-item"><a href="catalog.html" class="site-submenu-link">Умные часы</a></li>
-          <li class="site-submenu-item"><a href="catalog.html" class="site-submenu-link">Экшн-камеры</a></li>
-        </ul>
-      </section>
 
       <section class="promo">
         <h2 class="visually-hidden">Хиты товаров</h2>
         <ul class="promo-choise-list">
           <li class="promo-choise-item">
-            <input type="radio" class="promo-choise" name="promo-roduct" value="selfie stick" />
-            <label class="promo-choise-label"></label>
+            <input type="radio" class="promo-choise visually-hidden" name="promo-roduct" id="selfie-stick" value="selfie-stick" />
+            <label for="selfie-stick" class="promo-choise-label"></label>
           </li>
           <li class="promo-choise-item">
-            <input type="radio" class="promo-choise" name="promo-roduct" value="fitness tracker" checked />
-            <label class="promo-choise-label"></label>
+            <input type="radio" class="promo-choise visually-hidden" name="promo-roduct" id="fitness-tracker" value="fitness-tracker" checked />
+            <label for="fitness-tracker" class="promo-choise-label"></label>
           </li>
           <li class="promo-choise-item">
-            <input type="radio" class="promo-choise" name="promo-roduct" value="quadcopter" />
-            <label class="promo-choise-label"></label>
+            <input type="radio" class="promo-choise visually-hidden" name="promo-roduct" id="quadcopter" value="quadcopter" />
+            <label for="quadcopter" class="promo-choise-label"></label>
           </li>
         </ul>
 
         <ul class="promo-product-list">
           <li class="promo-product-item promo-product-item_active">
             <article class="promo-product-card">
-              <img src="img/promo-stick.png" alt="Самая длинная селфи-палка" class="promo-product-image" width="384" height="486" />
-              <h3 class="content-title content-title_promo">Делай селфи, как Бен Стилер!</h3>
+              <div class="promo-product-wrapper">
+                <img src="img/promo-stick.png" alt="Самая длинная селфи-палка" class="promo-product-image" width="384" height="486" />
+              </div>
+              <h3 class="content-title content-title_promo">Делай селфи,<br>как Бен Стилер!</h3>
               <p class="promo-product-description">
                 Самая длинная палка для селфи доступна в нашем магазине. Восемь
                 (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
               </p>
-              <a href="#" class="content-link content-link_option">Подробнее</a>
+              <a href="#" class="content-link content-link_option promo-product-link">Подробнее</a>
               <table class="promo-table">
                 <tr>
                   <td class="promo-table-row">8,5 м</td>
@@ -105,15 +105,17 @@
               </table>
             </article>
           </li>
-          <li class="promo-product-item ">
+          <li class="promo-product-item">
             <article class="promo-product-card">
-              <img src="img/promo-bracelet.png" alt="Фитнес браслеты для здоровья" class="promo-product-image" width="345" height="485" />
-              <h3 class="content-title content-title_promo">Худееем правильно!</h3>
+              <div class="promo-product-wrapper">
+                <img src="img/promo-bracelet.png" alt="Фитнес браслеты для здоровья" class="promo-product-image" width="345" height="485" />
+              </div>
+              <h3 class="content-title content-title_promo">Худееем<br>правильно!</h3>
               <p class="promo-product-description">
                 Мотивирующие фитнес браслеты помогут найти в себе силы не
                 пропусить занятия и соблюдать диету.
               </p>
-              <a href="#" class="content-link content-link_option">Подробнее</a>
+              <a href="#" class="content-link content-link_option promo-product-link">Подробнее</a>
               <table class="promo-table">
                 <tr>
                   <td class="promo-table-row">48 часов</td>
@@ -124,9 +126,11 @@
               </table>
             </article>
           </li>
-          <li class="promo-product-item ">
+          <li class="promo-product-item">
             <article class="promo-product-card">
-              <img src="img/promo-copter.png" alt="Необычный квадрокоптер" class="promo-product-image" width="526" height="334" />
+              <div class="promo-product-wrapper">
+                <img src="img/promo-copter.png" alt="Необычный квадрокоптер" class="promo-product-image promo-product-image_hopter" width="526" height="334" />
+              </div>
               <h3 class="content-title content-title_promo">
                 Порхает как бабочка, жалит как пчела!
               </h3>
@@ -134,7 +138,7 @@
                 Этот обычный, на первый взгляд, квадрокоптер оснащен мощным
                 лазером, замаскированным под обычную камеру.
               </p>
-              <a href="#" class="content-link content-link_option">Подробнее</a>
+              <a href="#" class="content-link content-link_option promo-product-link">Подробнее</a>
               <table class="promo-table">
                 <tr>
                   <td class="promo-table-row">800 м</td>
@@ -316,7 +320,7 @@
     </main>
 
     <footer class="footer">
-      <div class="footer-wrapper container">
+      <div class="footer-wrapper">
         <a class="content-logo-link content-logo-link_footer">
           <img src="img/logo-footer.svg" alt="Логотип магазина Device" class="footer-logo" width="163" height="35" />
         </a>
