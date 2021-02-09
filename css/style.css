@@ -56,8 +56,7 @@
 
 .page-body {
   display: grid;
-  grid-template-columns: 1fr repeat(12, 60px) 1fr;
-  column-gap: 40px;
+  grid-template-columns: 1fr 1200px 1fr;
   grid-template-rows: min-content 1fr min-content;
   justify-content: safe center;
   min-height: 100%;
@@ -216,6 +215,8 @@
   box-sizing: border-box;
   background-color: var(--special-yellow-light);
   padding: 0 60px;
+  margin-left: 20px;
+  margin-right: 20px;
   grid-column: 2 / -2;
 }
 
@@ -328,6 +329,8 @@
 
 .main_page_index {
   grid-column: 2 / -2;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* promo */
@@ -407,17 +410,15 @@
   position: relative;
   display: grid;
   grid-template-columns: 89px 1fr 1fr 47px;
-  grid-template-rows: 145px max-content max-content 40px min-content;
+  grid-template-rows: 145px max-content max-content minmax(40px, auto) min-content;
   align-items: stretch;
 }
 
 .promo-product-card::before {
   content: "";
   display: block;
-  width: 100%;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
-  height: 145px;
   background-color: var(--special-yellow-light);
 }
 
@@ -548,7 +549,7 @@
 }
 
 .services-choice-list {
-  width: 283px;
+  grid-column: 1 / 2;
   box-sizing: border-box;
   padding: 0;
   list-style-type: none;
@@ -571,7 +572,6 @@
   font-style: normal;
   font-size: 18px;
   line-height: 22px;
-
   letter-spacing: 0.2em;
   text-transform: uppercase;
   background-image: linear-gradient(
@@ -591,7 +591,7 @@
 
 .services-choise:checked ~ .services-choise-label,
 .services-choise-label:active {
-  width: 277px;
+  width: 100%;
   background-image: none;
   color: var(--basic-white);
   background-color: var(--basic-black);
@@ -688,7 +688,7 @@
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 328px 832px 1fr;
-  grid-template-rows: min-content min-content 70px min-content 70px 78px;
+  grid-template-rows: min-content min-content 70px min-content min-content;
 }
 
 .main_page_catalog::before {
@@ -1152,8 +1152,9 @@
 }
 
 .devices-footer {
+  min-height: 70px;
   grid-column: 3 / 3;
-  grid-row: -3 / -2;
+  grid-row: -2 / -1;
   display: flex;
   justify-content: space-between;
   background-color: #ebebeb;
@@ -1165,6 +1166,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-left: 72px;
+  margin-bottom: 78px;
 }
 
 .buttons-back-forward {
