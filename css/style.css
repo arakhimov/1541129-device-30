@@ -92,15 +92,16 @@
   opacity: 0.3;
 }
 
-.content-logo-link_header {
+.content-logo-link_dark {
+  position: absolute;
+  left: 60px;
+  top: -20px;
   display: inline-block;
-  transform: translateY(-20px);
-  margin-bottom: 9px;
 }
 
-.content-logo-link_footer {
+.content-logo-link_white {
   grid-area: 1 / 1 / 2 / 3;
-  padding-top: 24px;
+  padding-top: 12px;
   padding-bottom: 40px;
 }
 
@@ -108,85 +109,115 @@
   text-decoration: none;
   color: inherit;
   display: flex;
+  align-items: center;
 }
 
-.content-options-link_header:hover,
-.content-options-link_header:focus {
+.content-options-link_dark:hover,
+.content-options-link_dark:focus {
   opacity: 0.6;
 }
-.content-options-link_header:active {
+.content-options-link_dark:active {
   opacity: 0.3;
 }
 
-.content-options-link_footer {
+.content-options-link_white {
   opacity: 0.7;
 }
 
-.content-options-link_footer:hover,
-.content-options-link_footer:focus {
+.content-options-link_white:hover,
+.content-options-link_white:focus {
   opacity: 1;
 }
-.content-options-link_footer:active {
+.content-options-link_white:active {
   opacity: 0.3;
 }
 
-.content-options-link::before {
-  display: inline-block;
+.content-link-into::before,
+.content-link-compare::before,
+.content-link-cart::before,
+.content-link-user::before {
+  content: "";
+  display: block;
   margin-right: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.content-options-link_into::before,
-.content-options-link_compare::before {
+.content-link-into::before,
+.content-link-compare::before,
+.content-link-user::before {
   width: 14px;
   height: 14px;
 }
 
-.content-options-link_cart::before {
+.content-link-cart::before {
   width: 10px;
   height: 10px;
 }
 
-/* TODO уже поднимали этот вопрос по поводу использования таких селекторов, т.к. это повышает
-их специфичность - но пока не придумал другого решения кроме использования двух классов одновременно -
-различаются и иконки и стилевое оформление состояний */
-.content-options-link_header.content-options-link_into::before {
-  content: url("../img/into-header.svg");
+.content-link-into_dark::before {
+  background-image: url("../img/into-header.svg");
 }
 
-.content-options-link_header.content-options-link_compare::before {
-  content: url("../img/compare-header.svg");
+.content-link-compare_dark::before {
+  background-image: url("../img/compare-header.svg");
 }
 
-.content-options-link_header.content-options-link_cart::before {
-  content: url("../img/cart-header.svg");
+.content-link-cart_dark::before {
+  background-image: url("../img/cart-header.svg");
 }
 
-.content-options-link_footer.content-options-link_into::before {
-  content: url("../img/into-footer.svg");
+.content-link-into_white::before {
+  background-image: url("../img/into-footer.svg");
 }
 
-.content-options-link_footer.content-options-link_compare::before {
-  content: url("../img/compare-footer.svg");
+.content-link-compare_white::before {
+  background-image: url("../img/compare-footer.svg");
 }
 
-.content-options-link_footer.content-options-link_cart::before {
-  content: url("../img/cart-footer.svg");
+.content-link-cart_white::before {
+  background-image: url("../img/cart-footer.svg");
 }
 
-.content-options-link_header.content-options-link_into {
+.content-link-user_white::before {
+  background-image: url("../img/user.svg");
+}
+
+.content-link-user_dark::before {
+  background-image: url("../img/into-header.svg");
+}
+
+.content-link-into_dark {
   margin-right: 213px;
 }
 
-.content-options-link_header.content-options-link_compare {
+.content-link-compare_dark {
   margin-right: 41px;
 }
 
-.content-options-link_footer.content-options-link_into {
+.content-link-into_white {
   margin-right: 38px;
 }
 
-.content-options-link_footer.content-options-link_compare {
+.content-link-compare_white {
   margin-right: 40px;
+}
+
+.content-link-user_white {
+  margin-right: 24px;
+}
+
+.content-link-user_dark {
+  margin-right: 20px;
+}
+
+.content-link-out_white {
+  margin-right: 39px;
+}
+
+.content-link-out_dark {
+  margin-right: 50px;
+  opacity: 0.4;
 }
 
 .content-link {
@@ -257,29 +288,29 @@
   list-style-type: none;
 }
 
-.content-menu_footer {
-  align-self: center;
+.content-menu_white {
   margin: 0;
   padding: 0 20px;
+  justify-content: center;
 }
 
 .content-link_adv {
   margin-right: 16px;
 }
 
-.content-menu-item_header:first-of-type {
+.content-menu-item_dark:first-of-type {
   width: 540px;
 }
 
-.content-menu-item_header:nth-of-type(2) {
+.content-menu-item_dark:nth-of-type(2) {
   width: 159px;
 }
 
-.content-menu-item_header:nth-of-type(3) {
+.content-menu-item_dark:nth-of-type(3) {
   width: 218px;
 }
 
-.content-menu-item_footer:not(:last-of-type) {
+.content-menu-item_white:not(:last-of-type) {
   margin-right: 36px;
 }
 
@@ -320,12 +351,13 @@
   grid-template-columns: 473px 560px;
   column-gap: 127px;
   grid-template-rows: repeat(3, auto);
-  padding-bottom: 95px;
+  padding-bottom: 86px;
 }
 
 /* ****************page header**************** */
 
 .header {
+  position: relative;
   box-sizing: border-box;
   background-color: var(--special-yellow-light);
   padding: 0 60px;
@@ -343,6 +375,7 @@
   justify-content: space-between;
   margin: 0;
   margin-bottom: 35px;
+  padding-top: 35px;
 }
 
 .header-logo {
@@ -356,7 +389,11 @@
   justify-content: space-between;
   align-items: center;
   width: 440px;
-  min-height: 50px;
+  height: 50px;
+}
+
+.header-search_active {
+  border-bottom: 2px solid var(--basic-black);
 }
 
 .header-search-logo {
@@ -382,7 +419,6 @@
 
 .header-search-field:focus {
   opacity: 1;
-  border-bottom: 2px solid var(--basic-black);
 }
 
 .header-search-submit {
@@ -395,11 +431,13 @@
   background-color: transparent;
   border: none;
   outline: none;
-  border: 2px solid var(--basic-black);
+  border-left: 2px solid var(--basic-black);
+  border-top: 2px solid var(--basic-black);
+  border-right: 2px solid var(--basic-black);
 }
 
-.header-search-field:focus ~ .header-search-submit {
-  display: block;
+.header-search-submit_active {
+  display: inline-block;
 }
 
 .header-search-submit:hover,
@@ -471,7 +509,7 @@
 /* promo */
 
 .promo {
-  margin-bottom: 97px;
+  margin-bottom: 77px;
   position: relative;
 }
 
@@ -571,6 +609,7 @@
 }
 
 .promo-product-wrapper {
+  padding-top: 17px;
   grid-row: 1 / -1;
   grid-column: 2 / 3;
   display: grid;
@@ -679,6 +718,9 @@
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
+  margin: 0;
+  padding-top: 38px;
+  white-space: nowrap;
 }
 
 /* services */
@@ -865,7 +907,7 @@
 .about-us-list {
   padding: 0;
   margin: 0;
-  margin-bottom: 75px;
+  margin-bottom: 84px;
   list-style-type: none;
 }
 
@@ -875,6 +917,16 @@
   font-style: normal;
   font-size: 16px;
   line-height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.about-us-item::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-right: 24px;
+  background-image: url("../img/disk.svg");
 }
 
 .about-us-item:not(:last-of-type) {
@@ -883,6 +935,7 @@
 
 .about-us-link {
   width: 260px;
+  height: auto;
 }
 
 /* contacts */
@@ -1479,7 +1532,7 @@
   color: var(--basic-white);
   background-color: var(--basic-dark);
   grid-column: 1 / -1;
-  padding-top: 48px;
+  padding-top: 46px;
   padding-bottom: 65px;
 }
 
@@ -1488,7 +1541,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-template-rows: min-content minmax(80px, auto) min-content;
+  grid-template-rows: min-content minmax(90px, auto) min-content;
 }
 
 .footer-wrapper::after {
@@ -1498,7 +1551,7 @@
   width: 80px;
   height: 7px;
   background-color: var(--special-yellow-dark);
-  align-self: center;
+  transform: translateY(16px);
 }
 
 .footer-wrapper-row {
@@ -1511,11 +1564,9 @@
 
 .footer-adress {
   font-style: normal;
-  align-self: center;
 }
 
 .footer-tel {
-  align-self: center;
   color: inherit;
   text-decoration: none;
   justify-self: flex-end;
@@ -1527,7 +1578,8 @@
 }
 
 .footer-social-list {
-  justify-self: center;
+  justify-content: center;
+  margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
@@ -1552,7 +1604,6 @@
 
 .study-center-link {
   justify-self: flex-end;
-  align-self: center;
 }
 
 .study-center-link:hover,
