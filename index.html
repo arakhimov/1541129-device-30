@@ -25,7 +25,7 @@
           <label for="search-field" aria-label="Поиск по сайту">
             <img src="img/search.svg" alt="Поиск по сайту" class="header-search-logo" width="12" height="12">
           </label>
-          <input type="text" class="header-search-field" aria-label="Поиск по сайту" name="search-field" id="search-field" placeholder="Поиск по сайту" />
+          <input type="text" class="header-search-field" aria-label="Поиск по сайту" name="search-field" id="search-field" placeholder="Поиск по сайту" required />
           <button type="submit" name="search-submit" class="header-search-submit">Найти</button>
         </form>
 
@@ -72,11 +72,11 @@
         <h2 class="visually-hidden">Хиты товаров</h2>
         <ul class="promo-choise-list">
           <li class="promo-choise-item">
-            <input type="radio" class="promo-choise visually-hidden" name="promo-roduct" id="selfie-stick" value="selfie-stick" />
+            <input type="radio" class="promo-choise visually-hidden" name="promo-roduct" id="selfie-stick" value="selfie-stick" checked />
             <label for="selfie-stick" class="promo-choise-label"></label>
           </li>
           <li class="promo-choise-item">
-            <input type="radio" class="promo-choise visually-hidden" name="promo-roduct" id="fitness-tracker" value="fitness-tracker" checked />
+            <input type="radio" class="promo-choise visually-hidden" name="promo-roduct" id="fitness-tracker" value="fitness-tracker" />
             <label for="fitness-tracker" class="promo-choise-label"></label>
           </li>
           <li class="promo-choise-item">
@@ -91,7 +91,7 @@
               <div class="promo-product-wrapper">
                 <img src="img/promo-stick.png" alt="Самая длинная селфи-палка" class="promo-product-image" width="384" height="486" />
               </div>
-              <h3 class="content-title promo-title">Делай селфи,<br>как Бен Стилер!</h3>
+              <h3 class="content-title promo-title">Делай селфи,<br>как Бен Стиллер!</h3>
               <p class="promo-product-description">Самая длинная палка для селфи доступна в нашем магазине.
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
               </p>
@@ -163,7 +163,7 @@
               <div class="device-types-wrapper">
                 <img src="img/virtual-reality.svg" alt="Виртуальная реальность" width="97" height="55" class="device-types-image" />
               </div>
-              <h3 class="device-types-title">Виртуальная<br>реальность</h3>
+              <h3 class="device-types-title">Виртуальная реальность</h3>
             </a>
           </li>
           <li class="device-types-item">
@@ -213,7 +213,7 @@
         <h2 class="visually-hidden">Наши услуги</h2>
         <ul class="services-choice-list">
           <li class="services-choice-item">
-            <input type="radio" class="services-choise" name="services-roduct" value="delivery" id="delivery" />
+            <input type="radio" class="services-choise" name="services-roduct" value="delivery" id="delivery" checked />
             <label for="delivery" class="services-choise-label">Доставка</label>
           </li>
           <li class="services-choice-item">
@@ -221,13 +221,13 @@
             <label for="warranty" class="services-choise-label">Гарантия</label>
           </li>
           <li class="services-choice-item">
-            <input type="radio" class="services-choise" name="services-roduct" value="credit" id="credit" checked />
+            <input type="radio" class="services-choise" name="services-roduct" value="credit" id="credit" />
             <label for="credit" class="services-choise-label">Кредит</label>
           </li>
         </ul>
 
         <ul class="services-list">
-          <li class="services-item">
+          <li class="services-item services-item_active">
             <article class="services-card">
               <h3 class="content-title services-title">Доставка</h3>
               <p class="services-item-text">
@@ -247,7 +247,7 @@
               <img src="img/warranty.svg" alt="Гарантия" width="171" height="195" class="services-image" />
             </article>
           </li>
-          <li class="services-item services-item_active">
+          <li class="services-item">
             <article class="services-card">
               <h3 class="content-title services-title">Кредит</h3>
               <p class="services-item-text">
@@ -302,7 +302,7 @@
               <li class="about-us-item">ЖелДорЭкспедиция</li>
             </ul>
           </div>
-          <a href="#" class="content-link content-link_option about-us-link">Подробнее о нас</a>
+          <a href="#" class="content-link content-link_option content-link_option_wide">Подробнее о нас</a>
         </section>
 
         <section class="contacts">
@@ -315,7 +315,7 @@
               <img src="img/map.jpg" alt="Карта как до нас добраться" width="560" height="222" class="contacts-map" />
             </a>
           </div>
-          <a href="#" class="content-link content-link_option">Напишите нам</a>
+          <a href="#" class="content-link content-link_option content-link_option_wide">Напишите нам</a>
         </section>
       </div>
     </main>
@@ -379,6 +379,6 @@
         </a>
       </div>
     </footer>
-    <!-- <script src="index.js"></script> -->
+    <script src="js/index.js"></script>
   </body>
 </html>
