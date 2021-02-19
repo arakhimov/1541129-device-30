@@ -31,13 +31,13 @@
 
         <ul class="content-options">
           <li class="content-options-item">
-            <a href="#" class="content-options-link content-options-link_dark content-link-into content-link-into_dark">Войти</a>
+            <a href="blank.html" class="content-options-link content-options-link_dark content-link-into content-link-into_dark">Войти</a>
           </li>
           <li class="content-options-item">
-            <a href="#" class="content-options-link content-options-link_dark content-link-compare content-link-compare_dark">Сравнить</a>
+            <a href="blank.html" class="content-options-link content-options-link_dark content-link-compare content-link-compare_dark">Сравнить</a>
           </li>
           <li class="content-options-item">
-            <a href="#" class="content-options-link content-options-link_dark content-link-cart content-link-cart_dark">Корзина</a>
+            <a href="blank.html" class="content-options-link content-options-link_dark content-link-cart content-link-cart_dark">Корзина</a>
           </li>
         </ul>
       </div>
@@ -58,9 +58,9 @@
               </ul>
             </section>
           </li>
-          <li class="content-menu-item content-menu-item_dark"><a href="#" class="content-link content-link_menu">Доставка</a></li>
-          <li class="content-menu-item content-menu-item_dark"><a href="#" class="content-link content-link_menu">Гарантия</a></li>
-          <li class="content-menu-item content-menu-item_dark"><a href="#" class="content-link content-link_menu">Контакты</a></li>
+          <li class="content-menu-item content-menu-item_dark"><a href="blank.html" class="content-link content-link_menu">Доставка</a></li>
+          <li class="content-menu-item content-menu-item_dark"><a href="blank.html" class="content-link content-link_menu">Гарантия</a></li>
+          <li class="content-menu-item content-menu-item_dark"><a href="blank.html" class="content-link content-link_menu">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -73,21 +73,21 @@
         <ul class="promo-choise-list">
           <li class="promo-choise-item">
             <input type="radio" class="promo-choise visually-hidden" name="promo-roduct" id="selfie-stick" value="selfie-stick" checked />
-            <label for="selfie-stick" class="promo-choise-label"></label>
+            <label for="selfie-stick" class="promo-choise-label" data-choise="selfi-stick"></label>
           </li>
           <li class="promo-choise-item">
             <input type="radio" class="promo-choise visually-hidden" name="promo-roduct" id="fitness-tracker" value="fitness-tracker" />
-            <label for="fitness-tracker" class="promo-choise-label"></label>
+            <label for="fitness-tracker" class="promo-choise-label" data-choise="fitness-tracker"></label>
           </li>
           <li class="promo-choise-item">
             <input type="radio" class="promo-choise visually-hidden" name="promo-roduct" id="quadcopter" value="quadcopter" />
-            <label for="quadcopter" class="promo-choise-label"></label>
+            <label for="quadcopter" class="promo-choise-label" data-choise="quadcopter"></label>
           </li>
         </ul>
 
         <ul class="promo-product-list">
-          <li class="promo-product-item promo-product-item_active">
-            <article class="promo-product-card">
+          <li class="promo-product-item promo-product-item_active" data-type="selfi-stick">
+            <article class="promo-product-card promo-product-card_first">
               <div class="promo-product-wrapper">
                 <img src="img/promo-stick.png" alt="Самая длинная селфи-палка" class="promo-product-image" width="384" height="486" />
               </div>
@@ -95,61 +95,68 @@
               <p class="promo-product-description">Самая длинная палка для селфи доступна в нашем магазине.
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
               </p>
-              <a href="#" class="content-link content-link_option promo-product-link">Подробнее</a>
-              <table class="promo-table">
-                <tr>
-                  <td class="promo-table-row">8,5 м</td>
-                  <td class="promo-table-row">5 кг</td>
-                  <td class="promo-table-row">Карбон</td>
-                </tr>
-                <tr>
-                  <th class="promo-table-header">Длина палки</th>
-                  <th class="promo-table-header">Вес палки</th>
-                  <th class="promo-table-header">Материал</th>
-                </tr>
-              </table>
+              <a href="blank.html" class="content-link content-link_option promo-product-link">Подробнее</a>
+              <div class="promo-table-wrapper">
+                <table class="promo-table">
+                  <tr class="promo-table-row">
+                    <td class="promo-table-row">8,5&thinsp;м</td>
+                    <td class="promo-table-row">5&thinsp;кг</td>
+                    <td class="promo-table-row">Карбон</td>
+                  </tr>
+                  <tr class="promo-table-row">
+                    <th class="promo-table-header">Длина палки</th>
+                    <th class="promo-table-header">Вес палки</th>
+                    <th class="promo-table-header">Материал</th>
+                  </tr>
+                </table>
+              </div>
             </article>
           </li>
-          <li class="promo-product-item">
-            <article class="promo-product-card">
-              <div class="promo-product-wrapper">
+          <li class="promo-product-item" data-type="fitness-tracker">
+            <article class="promo-product-card promo-product-card_second">
+              <div class="promo-product-wrapper promo-product-wrapper_tracker">
                 <img src="img/promo-bracelet.png" alt="Фитнес браслеты для здоровья" class="promo-product-image" width="345" height="485" />
               </div>
-              <h3 class="content-title content-title_promo">Худееем<br>правильно!</h3>
+              <h3 class="content-title promo-title">Худеем<br>правильно!</h3>
               <p class="promo-product-description">Мотивирующие фитнес браслеты помогут найти в себе силы не
                 пропусить занятия и соблюдать диету.
               </p>
-              <a href="#" class="content-link content-link_option promo-product-link">Подробнее</a>
-              <table class="promo-table">
-                <tr>
-                  <td class="promo-table-row">48 часов</td>
-                </tr>
-                <tr>
-                  <th class="promo-table-header">Без подзарядки</th>
-                </tr>
-              </table>
+              <a href="blank.html" class="content-link content-link_option promo-product-link">Подробнее</a>
+              <div class="promo-table-wrapper">
+                <table class="promo-table">
+                  <tr>
+                    <td class="promo-table-row">48 часов</td>
+                  </tr>
+                  <tr>
+                    <th class="promo-table-header">Без подзарядки</th>
+                  </tr>
+                </table>
+            </div>
             </article>
           </li>
-          <li class="promo-product-item">
-            <article class="promo-product-card">
+          <li class="promo-product-item" data-type="quadcopter">
+            <article class="promo-product-card promo-product-card_third">
               <div class="promo-product-wrapper">
                 <img src="img/promo-copter.png" alt="Необычный квадрокоптер" class="promo-product-image promo-product-image_hopter" width="526" height="334" />
               </div>
-              <h3 class="content-title content-title_promo">Порхает как бабочка, жалит как пчела!</h3>
+              <h3 class="content-title promo-title">Порхает как бабочка, жалит как пчела!</h3>
               <p class="promo-product-description">Этот обычный, на первый взгляд, квадрокоптер оснащен
                  мощнымлазером, замаскированным под обычную камеру.
               </p>
-              <a href="#" class="content-link content-link_option promo-product-link">Подробнее</a>
-              <table class="promo-table">
-                <tr>
-                  <td class="promo-table-row">800 м</td>
-                  <td class="promo-table-row">50 м</td>
-                </tr>
-                <tr>
-                  <th class="promo-table-header">Дальность полёта</th>
-                  <th class="promo-table-header">Радиус поражения</th>
-                </tr>
-              </table>
+              <a href="blank.html" class="content-link content-link_option promo-product-link">Подробнее</a>
+              <div class="promo-table-wrapper">
+                <table class="promo-table">
+                  <tr class="promo-table-row">
+                    <td class="promo-table-row">800&thinsp;м</td>
+                    <td class="promo-table-row">50&thinsp;м</td>
+                  </tr>
+                  <tr class="promo-table-row">
+                    <th class="promo-table-header">Дальность полёта</th>
+                    <th class="promo-table-header">Радиус поражения</th>
+                  </tr>
+                </table>
+              </div>
+
             </article>
           </li>
         </ul>
@@ -213,48 +220,45 @@
         <h2 class="visually-hidden">Наши услуги</h2>
         <ul class="services-choice-list">
           <li class="services-choice-item">
-            <input type="radio" class="services-choise" name="services-roduct" value="delivery" id="delivery" checked />
-            <label for="delivery" class="services-choise-label">Доставка</label>
+            <input type="radio" class="services-choise visually-hidden" name="services-roduct" value="delivery" id="delivery" checked />
+            <label for="delivery" class="services-choise-label" data-services-choice="delivery">Доставка</label>
           </li>
           <li class="services-choice-item">
-            <input type="radio" class="services-choise" name="services-roduct" value="warranty" id="warranty" />
-            <label for="warranty" class="services-choise-label">Гарантия</label>
+            <input type="radio" class="services-choise visually-hidden" name="services-roduct" value="warranty" id="warranty" />
+            <label for="warranty" class="services-choise-label" data-services-choice="warranty">Гарантия</label>
           </li>
           <li class="services-choice-item">
-            <input type="radio" class="services-choise" name="services-roduct" value="credit" id="credit" />
-            <label for="credit" class="services-choise-label">Кредит</label>
+            <input type="radio" class="services-choise visually-hidden" name="services-roduct" value="credit" id="credit" />
+            <label for="credit" class="services-choise-label" data-services-choice="credit">Кредит</label>
           </li>
         </ul>
 
         <ul class="services-list">
-          <li class="services-item services-item_active">
+          <li class="services-item services-item_delivery services-item_active" data-services-type="delivery">
             <article class="services-card">
               <h3 class="content-title services-title">Доставка</h3>
               <p class="services-item-text">
                 Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
                 Ведь мы неплохо заработаем, поднимая его на ваш этаж.
               </p>
-              <img src="img/delivery.svg" width="136" height="164" alt="Доставка" class="services-image" />
             </article>
           </li>
-          <li class="services-item">
+          <li class="services-item services-item_warranty" data-services-type="warranty">
             <article class="services-card">
               <h3 class="content-title services-title">Гарантия</h3>
               <p class="services-item-text">
                 Если из-за возгарания купленного у нас товава у вас сгорит дом &mdash; не переживайте,
                 мы выдадим вам новый.<br />Товар, не дом, конечно же.
               </p>
-              <img src="img/warranty.svg" alt="Гарантия" width="171" height="195" class="services-image" />
             </article>
           </li>
-          <li class="services-item">
+          <li class="services-item services-item_credit" data-services-type="credit">
             <article class="services-card">
               <h3 class="content-title services-title">Кредит</h3>
               <p class="services-item-text">
                 Залезть в долговую яму стало проще. Кредитные консультанты подберут для вас наиболее
                 выгодные условия кредита. Выгодные для нашего банка, разумеется.
               </p>
-              <img src="img/credit.svg" alt="Кредит" width="156" height="188" class="services-image" />
             </article>
           </li>
         </ul>
@@ -264,22 +268,22 @@
         <h2 class="visually-hidden">Наши производители</h2>
         <ul class="logotypes-list">
           <li class="logotypes-item">
-            <a href="#" class="logotypes-link">
+            <a href="blank.html" class="logotypes-link">
               <img src="img/dji.png" alt="Dji" width="260" height="100" class="logotypes-image" />
             </a>
           </li>
           <li class="logotypes-item">
-            <a href="#" class="logotypes-link">
+            <a href="blank.html" class="logotypes-link">
               <img src="img/sp-gadgets.jpg" alt="SPGatgets" width="260" height="100" class="logotypes-image" />
             </a>
           </li>
           <li class="logotypes-item">
-            <a href="#" class="logotypes-link">
+            <a href="blank.html" class="logotypes-link">
               <img src="img/go-pro.jpg" alt="GoPro" width="260" height="100" class="logotypes-image" />
             </a>
           </li>
           <li class="logotypes-item">
-            <a href="#" class="logotypes-link">
+            <a href="blank.html" class="logotypes-link">
               <img src="img/vive.jpg" alt="Vive" width="260" height="100" class="logotypes-image" />
             </a>
           </li>
@@ -302,20 +306,20 @@
               <li class="about-us-item">ЖелДорЭкспедиция</li>
             </ul>
           </div>
-          <a href="#" class="content-link content-link_option content-link_option_wide">Подробнее о нас</a>
+          <a href="blank.html" class="content-link content-link_option content-link_option_wide">Подробнее о нас</a>
         </section>
 
         <section class="contacts">
           <h2 class="content-title content-title_columns contacts-title">Контакты</h2>
           <div class="contacts-wrapper">
             <p class="contacts-description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
-              проверить работоспособность покупки.
+              проверить работоспособность покупки. Всякое бывает.
             </p>
-            <a href="#" class="contacts-link">
+            <a href="map.html" class="contacts-link">
               <img src="img/map.jpg" alt="Карта как до нас добраться" width="560" height="222" class="contacts-map" />
             </a>
           </div>
-          <a href="#" class="content-link content-link_option content-link_option_wide">Напишите нам</a>
+          <a href="blank.html" class="content-link content-link_option content-link_option_wide">Напишите нам</a>
         </section>
       </div>
     </main>
@@ -329,13 +333,13 @@
 
           <ul class="content-options">
             <li class="content-options-item">
-              <a href="#" class="content-options-link content-options-link_white content-link-into content-link-into_white">Войти</a>
+              <a href="blank.html" class="content-options-link content-options-link_white content-link-into content-link-into_white">Войти</a>
             </li>
             <li class="content-options-item">
-              <a href="#" class="content-options-link content-options-link_white content-link-compare content-link-compare_white">Сравнить</a>
+              <a href="blank.html" class="content-options-link content-options-link_white content-link-compare content-link-compare_white">Сравнить</a>
             </li>
             <li class="content-options-item">
-              <a href="#" class="content-options-link content-options-link_white content-link-cart content-link-cart_white">Корзина</a>
+              <a href="blank.html" class="content-options-link content-options-link_white content-link-cart content-link-cart_white">Корзина</a>
             </li>
           </ul>
         </div>
@@ -344,13 +348,13 @@
 
         <ul class="content-menu content-menu_white">
           <li class="content-menu-item content-menu-item_white">
-            <a href="#" class="content-link content-link_menu">Доставка</a>
+            <a href="blank.html" class="content-link content-link_menu">Доставка</a>
           </li>
           <li class="content-menu-item content-menu-item_white">
-            <a href="#" class="content-link content-link_menu">Гарантия</a>
+            <a href="blank.html" class="content-link content-link_menu">Гарантия</a>
           </li>
           <li class="content-menu-item content-menu-item_white">
-            <a href="#" class="content-link content-link_menu">Контакты</a>
+            <a href="blank.html" class="content-link content-link_menu">Контакты</a>
           </li>
         </ul>
 
@@ -358,17 +362,17 @@
 
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a href="#" class="footer-social-link">
+            <a href="blank.html" class="footer-social-link">
               <img src="img/facebook.svg" alt="facebook" width="32" height="32" class="footer-social-logo" />
             </a>
           </li>
           <li class="footer-social-item">
-            <a href="#" class="footer-social-link">
+            <a href="blank.html" class="footer-social-link">
               <img src="img/instagram.svg" alt="instagram" width="32" height="32" class="footer-social-logo" />
             </a>
           </li>
           <li class="footer-social-item">
-            <a href="#" class="footer-social-link">
+            <a href="blank.html" class="footer-social-link">
               <img src="img/twitter.svg" alt="twitter" width="32" height="32" class="footer-social-logo" />
             </a>
           </li>

@@ -45,3 +45,46 @@ for (let $link of deviceLinks) {
       .classList.add("visually-hidden");
   });
 }
+
+// открытие подменю
+const $menuItem = document.querySelector(".content-menu-item");
+const $openSubmenu = $menuItem.querySelector(".header-show-submenu");
+const $submenu = $menuItem.querySelector(".content-menu-advanced");
+$openSubmenu.addEventListener("click", () => {
+  $submenu.classList.remove("visually-hidden");
+});
+$menuItem.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    $submenu.classList.add("visually-hidden");
+  }
+});
+
+// слайдер promo
+const $promoCards = document.querySelectorAll(".promo-product-item");
+const $promoSelects = document.querySelectorAll(".promo-choise-label");
+for (let item of $promoSelects) {
+  item.addEventListener("click", (event) => {
+    for (let card of $promoCards) {
+      if (card.dataset.type === event.target.dataset.choise) {
+        card.classList.add("promo-product-item_active");
+      } else {
+        card.classList.remove("promo-product-item_active");
+      }
+    }
+  });
+}
+
+// слайдер services
+const $servicesCards = document.querySelectorAll(".services-item");
+const $servicesSelects = document.querySelectorAll(".services-choise-label");
+for (let item of $servicesSelects) {
+  item.addEventListener("click", (event) => {
+    for (let card of $servicesCards) {
+      if (card.dataset.servicesType === event.target.dataset.servicesChoice) {
+        card.classList.add("services-item_active");
+      } else {
+        card.classList.remove("services-item_active");
+      }
+    }
+  });
+}

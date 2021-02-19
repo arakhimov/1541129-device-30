@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Интернет магазин Device" />
+    <meta name="keywords" content="HTML, CSS, JS, Git" />
+    <meta name="author" content="Artem Rakhimov artemiirakhimov@yandex.ru" />
+    <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+  </head>
+  <body class="page-body">
+    <header class="header">
+      <a href="index.html" class="content-logo-link content-logo-link_dark">
+        <img src="img/logo-header.svg" alt="Логотип магазина Device" class="header-logo" width="163" height="35" />
+      </a>
+
+      <div class="header-wrapper">
+        <form action="#" method="GET" class="header-search" name="search">
+          <label for="search-field" aria-label="Поиск по сайту">
+            <img src="img/search.svg" alt="Поиск по сайту" class="header-search-logo" width="12" height="12">
+          </label>
+          <input type="text" class="header-search-field" aria-label="Поиск по сайту" name="search-field" id="search-field" placeholder="Поиск по сайту" required />
+          <button type="submit" name="search-submit" class="header-search-submit">Найти</button>
+        </form>
+
+        <ul class="content-options">
+          <li class="content-options-item">
+            <a href="#" class="content-options-link content-options-link_dark content-link-into content-link-into_dark">Войти</a>
+          </li>
+          <li class="content-options-item">
+            <a href="#" class="content-options-link content-options-link_dark content-link-compare content-link-compare_dark">Сравнить</a>
+          </li>
+          <li class="content-options-item">
+            <a href="#" class="content-options-link content-options-link_dark content-link-cart content-link-cart_dark">Корзина</a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="header-nav">
+        <ul class="content-menu">
+          <li class="content-menu-item content-menu-item_dark">
+            <a href="catalog.html" class="content-link content-link_menu content-link_adv">Каталог товаров</a>
+            <button type="button" name="header-show-submenu" aria-label="Открыть каталог" class="header-show-submenu" title="Открыть каталог"></button>
+            <section class="content-menu-advanced visually-hidden">
+              <ul class="content-submenu">
+                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Виртуальная реальность</a></li>
+                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Фитнес браслеты</a></li>
+                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Квадрокоптер</a></li>
+                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Моноподы для селфи</a></li>
+                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Умные часы</a></li>
+                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Экшн-камеры</a></li>
+              </ul>
+            </section>
+          </li>
+          <li class="content-menu-item content-menu-item_dark"><a href="#" class="content-link content-link_menu">Доставка</a></li>
+          <li class="content-menu-item content-menu-item_dark"><a href="#" class="content-link content-link_menu">Гарантия</a></li>
+          <li class="content-menu-item content-menu-item_dark"><a href="#" class="content-link content-link_menu">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main main_page_index">
+      <h1 class="visually-hidden">Интернет-магазин Device</h1>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-wrapper-row">
+          <a href="index.html" class="content-logo-link content-logo-link_white">
+            <img src="img/logo-footer.svg" alt="Логотип магазина Device" class="footer-logo" width="163" height="35" />
+          </a>
+
+          <ul class="content-options">
+            <li class="content-options-item">
+              <a href="#" class="content-options-link content-options-link_white content-link-into content-link-into_white">Войти</a>
+            </li>
+            <li class="content-options-item">
+              <a href="#" class="content-options-link content-options-link_white content-link-compare content-link-compare_white">Сравнить</a>
+            </li>
+            <li class="content-options-item">
+              <a href="#" class="content-options-link content-options-link_white content-link-cart content-link-cart_white">Корзина</a>
+            </li>
+          </ul>
+        </div>
+
+        <address class="footer-adress">г. Москва, ул. Строителей, 15</address>
+
+        <ul class="content-menu content-menu_white">
+          <li class="content-menu-item content-menu-item_white">
+            <a href="#" class="content-link content-link_menu">Доставка</a>
+          </li>
+          <li class="content-menu-item content-menu-item_white">
+            <a href="#" class="content-link content-link_menu">Гарантия</a>
+          </li>
+          <li class="content-menu-item content-menu-item_white">
+            <a href="#" class="content-link content-link_menu">Контакты</a>
+          </li>
+        </ul>
+
+        <a href="tel:+749549595995" class="footer-tel">Тел.: +7(495) 495-95-95</a>
+
+        <ul class="footer-social-list">
+          <li class="footer-social-item">
+            <a href="#" class="footer-social-link">
+              <img src="img/facebook.svg" alt="facebook" width="32" height="32" class="footer-social-logo" />
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a href="#" class="footer-social-link">
+              <img src="img/instagram.svg" alt="instagram" width="32" height="32" class="footer-social-logo" />
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a href="#" class="footer-social-link">
+              <img src="img/twitter.svg" alt="twitter" width="32" height="32" class="footer-social-logo" />
+            </a>
+          </li>
+        </ul>
+
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="study-center-link" >
+          <img src="img/html-academy.svg" alt="HTMLAcademy" width="27"  height="34" class="study-center-logo" />
+        </a>
+      </div>
+    </footer>
+    <script src="js/index.js"></script>
+  </body>
+</html>
