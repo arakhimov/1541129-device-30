@@ -25,7 +25,7 @@
           <label for="search-field" aria-label="Поиск по сайту">
             <img src="img/search.svg" alt="Поиск по сайту" class="header-search-logo" width="12" height="12">
           </label>
-          <input type="text" class="header-search-field" aria-label="Поиск по сайту" name="search-field" id="search-field" placeholder="Поиск по сайту" />
+          <input type="text" class="header-search-field" aria-label="Поиск по сайту" name="search-field" id="search-field" placeholder="Поиск по сайту" required />
           <button type="submit" name="search-submit" class="header-search-submit">Найти</button>
         </form>
 
@@ -81,14 +81,27 @@
       <section class="filter">
         <h2 class="filter-title">Фильтр:</h2>
         <form action="https://echo.htmlacademy.ru/" method="POST" class="filter-form">
-          <fieldset class="filter-fieldset filter-cost">
+          <fieldset class="filter-fieldset filter-fieldset_range">
             <legend class="filter-form-legend">Стоимость</legend>
-            <label for="cost-min" class="filter-label filter-cost-min-label" aria-label="Начальная цена">от</label>
-            <input type="text" class="filter-cost-min" id="cost-min" name="cost-min" value="0">
-            <label for="cost-max" class="filter-label filter-cost-max-label" aria-label="Максимальная цена">до</label>
-            <input type="text" class="filter-cost-max" id="cost-max" name="cost-max" value="3000">
+            <div class="filter-cost">
+              <div class="filter-cost-controls">
+                <div class="filter-cost-scale">
+                  <div class="filter-cost-bar"></div>
+                </div>
+                <div class="filter-cost-toggle filter-cost-toggle_min" tabindex="0"></div>
+                <div class="filter-cost-toggle filter-cost-toggle_max" tabindex="0"></div>
+              </div>
+              <div class="filter-cost-price">
+                <label class="filter-cost-label" aria-label="Начальная цена">от
+                  <input type="text" class="filter-cost-feild filter-cost-feild_min" name="cost-min" value="0">
+                </label>
+                <label class="filter-cost-label" aria-label="Максимальная цена">до
+                  <input type="text" class="filter-cost-feild filter-cost-feild_max" name="cost-max" value="5000">
+                </label>
+              </div>
+            </div>
           </fieldset>
-          <fieldset class="filter-fieldset filter-color">
+          <fieldset class="filter-fieldset filter-fieldset_color">
             <legend class="filter-form-legend">Цвет</legend>
             <ul class="filter-color-list">
               <li class="filter-color-item">
@@ -113,7 +126,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-fieldset filter-bluetooth">
+          <fieldset class="filter-fieldset filter-fieldset_bluetooth">
             <legend class="filter-form-legend">Bluetooth</legend>
             <ul class="filter-bluetooth-list">
               <li class="filter-bluetooth-item">
@@ -184,7 +197,7 @@
               <a href="#" class="devices-link devices-link-compare">Добавить к сравнению</a>
             </div>
           </li>
-          <li class="devices-item">
+          <li class="devices-item devices-item_new">
             <img src="img/stick_4.png" alt="Селфи-палка 'Следуй за мной'" width="360" height="380" class="devices-image"/>
             <div class="devices-item-wrapper">
               <h3 class="devices-title">Селфи-палка &laquo;Следуй за мной&raquo;</h3>

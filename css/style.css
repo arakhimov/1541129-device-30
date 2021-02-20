@@ -1070,11 +1070,12 @@
   letter-spacing: normal;
   grid-column: 2 / -2;
   grid-row: 1 / 2;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
   padding-left: 60px;
 }
 
 .breadcrumbs {
+  font-size: 14px;
   grid-column: 2 / -2;
   grid-row: 2 / 3;
   padding: 0;
@@ -1159,11 +1160,11 @@
 }
 
 .filter-fieldset_color {
-  margin-bottom: 37px;
+  margin: 0 0 39px;
 }
 
 .filter-fieldset_bluetooth {
-  margin-bottom: 41px;
+  margin: 0 0 44px;
 }
 
 .filter-form-legend {
@@ -1184,14 +1185,9 @@
 
 /* range */
 
-/* .filter-cost {
-  padding-top: 9px;
-} */
-
 .filter-cost-controls {
   position: relative;
   padding-top: 9px;
-  margin-bottom: 8px;
   min-height: 20px;
 }
 
@@ -1219,11 +1215,11 @@
 }
 
 .filter-cost-toggle_min {
-  left: 0;
+  left: -1%;
 }
 
 .filter-cost-toggle_max {
-  left: 60%;
+  left: 56%;
 }
 
 .filter-cost-price {
@@ -1236,7 +1232,7 @@
   font-style: normal;
   font-size: 14px;
   line-height: 16px;
-  width: 100px;
+  width: 96px;
 }
 
 .filter-cost-feild {
@@ -1246,17 +1242,19 @@
   font-family: inherit;
   font-size: inherit;
   margin: 0;
+  padding: 0;
 }
 
 /* checkbox */
 
 .filter-color-list {
   padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 
 .filter-color-item:not(:last-of-type) {
-  margin-bottom: 12px;
+  margin-bottom: 19px;
 }
 
 .filter-color-label {
@@ -1321,11 +1319,13 @@
 
 .filter-bluetooth-list {
   padding: 0;
+  margin: 0;
+  margin-top: 2px;
   list-style-type: none;
 }
 
 .filter-bluetooth-item:not(:last-of-type) {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .filter-bluetooth-label {
@@ -1459,11 +1459,12 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin: 0;
-  margin-right: 74px;
+  margin-right: 72px;
 }
 
 .devices-sort-list {
   font-weight: normal;
+  font-size: 14px;
   padding: 0;
   list-style-type: none;
   display: flex;
@@ -1565,12 +1566,23 @@
   position: relative;
 }
 
+.devices-item_new::after {
+  content: "";
+  width: 82px;
+  height: 82px;
+  background-image: url("../img/new-icon.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 29px;
+  right: 8px;
+}
+
 .devices-item:hover .devices-image {
   opacity: 0.7;
 }
 
 .devices-image {
-  margin-bottom: 31px;
+  margin-bottom: 26px;
 }
 
 .devices-item-wrapper {
@@ -1598,6 +1610,7 @@
   line-height: 18px;
   letter-spacing: 0.05em;
   margin: 0;
+  margin-top: 3px;
 }
 
 .devices-link-wrapper {
@@ -1642,6 +1655,7 @@
   text-transform: uppercase;
   margin-left: 72px;
   margin-bottom: 78px;
+  padding: 0 24px;
 }
 
 .buttons-back-forward {
