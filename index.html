@@ -8,7 +8,7 @@
     <meta name="author" content="Artem Rakhimov artemiirakhimov@yandex.ru" />
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-min.css" />
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon/180.png">
@@ -72,16 +72,16 @@
         <h2 class="visually-hidden">Хиты товаров</h2>
         <ul class="promo-choise-list">
           <li class="promo-choise-item">
-            <input type="radio" class="promo-choise visually-hidden" name="promo-roduct" id="selfie-stick" value="selfie-stick" checked />
-            <label for="selfie-stick" class="promo-choise-label" data-choise="selfi-stick"></label>
+            <input type="radio" class="promo-choise visually-hidden" data-choice="selfi-stick" name="promo-roduct" id="selfie-stick" value="selfie-stick" checked />
+            <label for="selfie-stick" class="promo-choise-label" data-choice="selfi-stick"></label>
           </li>
           <li class="promo-choise-item">
-            <input type="radio" class="promo-choise visually-hidden" name="promo-roduct" id="fitness-tracker" value="fitness-tracker" />
-            <label for="fitness-tracker" class="promo-choise-label" data-choise="fitness-tracker"></label>
+            <input type="radio" class="promo-choise visually-hidden" data-choice="fitness-tracker" name="promo-roduct" id="fitness-tracker" value="fitness-tracker" />
+            <label for="fitness-tracker" class="promo-choise-label" data-choice="fitness-tracker"></label>
           </li>
           <li class="promo-choise-item">
-            <input type="radio" class="promo-choise visually-hidden" name="promo-roduct" id="quadcopter" value="quadcopter" />
-            <label for="quadcopter" class="promo-choise-label" data-choise="quadcopter"></label>
+            <input type="radio" class="promo-choise visually-hidden" data-choice="quadcopter" name="promo-roduct" id="quadcopter" value="quadcopter" />
+            <label for="quadcopter" class="promo-choise-label" data-choice="quadcopter"></label>
           </li>
         </ul>
 
@@ -220,15 +220,15 @@
         <h2 class="visually-hidden">Наши услуги</h2>
         <ul class="services-choice-list">
           <li class="services-choice-item">
-            <input type="radio" class="services-choise visually-hidden" name="services-roduct" value="delivery" id="delivery" checked />
+            <input type="radio" class="services-choise visually-hidden" data-services-choice="delivery" name="services-roduct" value="delivery" id="delivery" checked />
             <label for="delivery" class="services-choise-label" data-services-choice="delivery">Доставка</label>
           </li>
           <li class="services-choice-item">
-            <input type="radio" class="services-choise visually-hidden" name="services-roduct" value="warranty" id="warranty" />
+            <input type="radio" class="services-choise visually-hidden" data-services-choice="warranty" name="services-roduct" value="warranty" id="warranty" />
             <label for="warranty" class="services-choise-label" data-services-choice="warranty">Гарантия</label>
           </li>
           <li class="services-choice-item">
-            <input type="radio" class="services-choise visually-hidden" name="services-roduct" value="credit" id="credit" />
+            <input type="radio" class="services-choise visually-hidden" data-services-choice="credit" name="services-roduct" value="credit" id="credit" />
             <label for="credit" class="services-choise-label" data-services-choice="credit">Кредит</label>
           </li>
         </ul>
@@ -306,7 +306,7 @@
               <li class="about-us-item">ЖелДорЭкспедиция</li>
             </ul>
           </div>
-          <a href="blank.html" class="content-link content-link_option content-link_option_wide">Подробнее о нас</a>
+          <a href="blank.html" class="content-link content-link_option about-us-link">Подробнее о нас</a>
         </section>
 
         <section class="contacts">
@@ -316,10 +316,17 @@
               проверить работоспособность покупки. Всякое бывает.
             </p>
             <a href="map.html" class="contacts-link">
-              <img src="img/map.jpg" alt="Карта как до нас добраться" width="560" height="222" class="contacts-map" />
+              <img src="img/map.jpg" alt="Офис магазина по адресу: улица Строителей, дом 15, Москва" width="560" height="222" class="contacts-map" />
             </a>
           </div>
-          <a href="blank.html" class="content-link content-link_option content-link_option_wide">Напишите нам</a>
+          <section class="modal modal-map">
+            <h2 class="visually-hidden">Как до нас добраться</h2>
+            <iframe class="modal-map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473095!2d37.527429315425984!3d55.687034004530716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1614367079826!5m2!1sru!2sru"
+              width="994" height="593" allowfullscreen="" loading="lazy" title="Офис магазина по адресу: улица Строителей, дом 15, Москва">
+            </iframe>
+            <button class="modal-close modal-close_map" aria-label="Закрыть" title="Закрыть"></button>
+          </section>
+          <a href="blank.html" class="content-link content-link_option contacts-link-message">Напишите нам</a>
         </section>
       </div>
     </main>
@@ -383,6 +390,21 @@
         </a>
       </div>
     </footer>
-    <script src="js/index.js"></script>
+
+    <section class="modal modal-message">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <form action="https://echo.htmlacademy.ru/" method="POST" class="message-form">
+        <label for="message-author" class="message-form-label message-form-label_name">Ваше имя:</label>
+        <input name="message-author" id="message-author" type="text" class="message-form-field message-form-field_name" placeholder="Имя Фамилия" required />
+        <label for="message-email" class="message-form-label message-form-label_email">Ваш e-mail:</label>
+        <input name="message-email" id="message-email" type="email" class="message-form-field message-form-field_email" placeholder="email@example.com" required />
+        <label for="message-text" class="message-form-label message-form-label_text">Текст письма:</label>
+        <textarea name="message-text" id="message-text" class="message-form-field message-form-field_text" placeholder="В свободной форме" required></textarea>
+        <button type="submit" class="content-link content-link_option modal-message_link">Отправить</button>
+      </form>
+      <button class="modal-close modal-close_message" aria-label="Закрыть" title="Закрыть"></button>
+    </section>
+
+    <script src="js/index-min.js"></script>
   </body>
 </html>
