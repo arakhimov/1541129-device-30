@@ -44,19 +44,20 @@
 
       <nav class="header-nav">
         <ul class="content-menu">
-          <li class="content-menu-item content-menu-item_dark">
+          <li class="content-menu-item content-menu-item_dark content-menu-item_submenu">
+            <div class="content-menu-item-wrapper">
             <a href="catalog.html" class="content-link content-link_menu content-link_adv">Каталог товаров</a>
-            <button type="button" name="header-show-submenu" aria-label="Открыть каталог" class="header-show-submenu" title="Открыть каталог"></button>
-            <section class="content-menu-advanced visually-hidden">
-              <ul class="content-submenu">
-                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Виртуальная реальность</a></li>
-                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Фитнес браслеты</a></li>
-                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Квадрокоптер</a></li>
-                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Моноподы для селфи</a></li>
-                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Умные часы</a></li>
-                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Экшн-камеры</a></li>
-              </ul>
-            </section>
+              <section class="content-menu-advanced">
+                <ul class="content-submenu">
+                  <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Виртуальная реальность</a></li>
+                  <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Фитнес браслеты</a></li>
+                  <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Квадрокоптер</a></li>
+                  <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Моноподы для селфи</a></li>
+                  <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Умные часы</a></li>
+                  <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Экшн-камеры</a></li>
+                </ul>
+              </section>
+            </div>
           </li>
           <li class="content-menu-item content-menu-item_dark"><a href="blank.html" class="content-link content-link_menu">Доставка</a></li>
           <li class="content-menu-item content-menu-item_dark"><a href="blank.html" class="content-link content-link_menu">Гарантия</a></li>
@@ -72,15 +73,15 @@
         <h2 class="visually-hidden">Хиты товаров</h2>
         <ul class="promo-choise-list">
           <li class="promo-choise-item">
-            <input type="radio" class="promo-choise visually-hidden" data-choice="selfi-stick" name="promo-roduct" id="selfie-stick" value="selfie-stick" checked />
+            <input type="radio" class="promo-choise visually-hidden" data-choice="selfi-stick" name="promo-roduct" id="selfie-stick" value="selfie-stick" aria-label="Карточка товара - самая длинная селфи-палка" checked />
             <label for="selfie-stick" class="promo-choise-label" data-choice="selfi-stick"></label>
           </li>
           <li class="promo-choise-item">
-            <input type="radio" class="promo-choise visually-hidden" data-choice="fitness-tracker" name="promo-roduct" id="fitness-tracker" value="fitness-tracker" />
+            <input type="radio" class="promo-choise visually-hidden" data-choice="fitness-tracker" name="promo-roduct" id="fitness-tracker" value="fitness-tracker" aria-label="Карточка товара - фитнес-браслет" />
             <label for="fitness-tracker" class="promo-choise-label" data-choice="fitness-tracker"></label>
           </li>
           <li class="promo-choise-item">
-            <input type="radio" class="promo-choise visually-hidden" data-choice="quadcopter" name="promo-roduct" id="quadcopter" value="quadcopter" />
+            <input type="radio" class="promo-choise visually-hidden" data-choice="quadcopter" name="promo-roduct" id="quadcopter" value="quadcopter" aria-label="Карточка товара - квадрокоптер" />
             <label for="quadcopter" class="promo-choise-label" data-choice="quadcopter"></label>
           </li>
         </ul>
@@ -91,7 +92,7 @@
               <div class="promo-product-wrapper">
                 <img src="img/promo-stick.png" alt="Самая длинная селфи-палка" class="promo-product-image" width="384" height="486" />
               </div>
-              <h3 class="content-title promo-title">Делай селфи,<br>как Бен Стиллер!</h3>
+              <h3 class="content-title promo-title">Делай селфи,<br />как Бен Стиллер!</h3>
               <p class="promo-product-description">Самая длинная палка для селфи доступна в нашем магазине.
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
               </p>
@@ -117,9 +118,9 @@
               <div class="promo-product-wrapper promo-product-wrapper_tracker">
                 <img src="img/promo-bracelet.png" alt="Фитнес браслеты для здоровья" class="promo-product-image" width="345" height="485" />
               </div>
-              <h3 class="content-title promo-title">Худеем<br>правильно!</h3>
-              <p class="promo-product-description">Мотивирующие фитнес браслеты помогут найти в себе силы не
-                пропусить занятия и соблюдать диету.
+              <h3 class="content-title promo-title">Худеем<br />правильно!</h3>
+              <p class="promo-product-description">Мотивирующие фитнес браслеты помогут найти в себе силы
+                не&nbsp;пропускать занятия и соблюдать диету.
               </p>
               <a href="blank.html" class="content-link content-link_option promo-product-link">Подробнее</a>
               <div class="promo-table-wrapper">
@@ -140,15 +141,15 @@
                 <img src="img/promo-copter.png" alt="Необычный квадрокоптер" class="promo-product-image promo-product-image_hopter" width="526" height="334" />
               </div>
               <h3 class="content-title promo-title">Порхает как бабочка, жалит как пчела!</h3>
-              <p class="promo-product-description">Этот обычный, на первый взгляд, квадрокоптер оснащен
-                 мощнымлазером, замаскированным под обычную камеру.
+              <p class="promo-product-description">Этот обычный, на первый взгляд, квадрокоптер оснащен<br />
+                 мощным лазером, замаскированным под стандартную камеру.
               </p>
               <a href="blank.html" class="content-link content-link_option promo-product-link">Подробнее</a>
               <div class="promo-table-wrapper">
                 <table class="promo-table">
                   <tr class="promo-table-row">
                     <td class="promo-table-row">800&thinsp;м</td>
-                    <td class="promo-table-row">50&thinsp;м</td>
+                    <td class="promo-table-row promo-table-row_third-card">50&thinsp;м</td>
                   </tr>
                   <tr class="promo-table-row">
                     <th class="promo-table-header">Дальность полёта</th>
@@ -176,9 +177,9 @@
           <li class="device-types-item">
             <a href="catalog.html" class="device-types-link">
               <div class="device-types-wrapper">
-                <img src="img/selfi-stick.svg" alt="Моноподы для селфи" width="86" height="117" class="device-types-image" />
+                <img src="img/selfi-stick.svg" alt="Моноподы для селфи" width="86" height="117" class="device-types-image device-types-image_stick" />
               </div>
-              <h3 class="device-types-title">Моноподы<br>для селфи</h3>
+              <h3 class="device-types-title">Моноподы<br />для селфи</h3>
             </a>
           </li>
           <li class="device-types-item">
@@ -237,27 +238,24 @@
           <li class="services-item services-item_delivery services-item_active" data-services-type="delivery">
             <article class="services-card">
               <h3 class="content-title services-title">Доставка</h3>
-              <p class="services-item-text">
-                Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-                Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+              <p class="services-item-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+                совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
               </p>
             </article>
           </li>
           <li class="services-item services-item_warranty" data-services-type="warranty">
             <article class="services-card">
               <h3 class="content-title services-title">Гарантия</h3>
-              <p class="services-item-text">
-                Если из-за возгарания купленного у нас товава у вас сгорит дом &mdash; не переживайте,
-                мы выдадим вам новый.<br />Товар, не дом, конечно же.
+              <p class="services-item-text">Если из-за возгарания купленного у нас товава у вас сгорит дом
+                &mdash; не переживайте,мы выдадим вам новый.<br />Товар, не дом, конечно же.
               </p>
             </article>
           </li>
           <li class="services-item services-item_credit" data-services-type="credit">
             <article class="services-card">
               <h3 class="content-title services-title">Кредит</h3>
-              <p class="services-item-text">
-                Залезть в долговую яму стало проще. Кредитные консультанты подберут для вас наиболее
-                выгодные условия кредита. Выгодные для нашего банка, разумеется.
+              <p class="services-item-text">Залезть в долговую яму стало проще. Кредитные консультанты
+                подберут для вас наиболеевыгодные условия кредита. Выгодные для нашего банка, разумеется.
               </p>
             </article>
           </li>
@@ -338,7 +336,7 @@
             <img src="img/logo-footer.svg" alt="Логотип магазина Device" class="footer-logo" width="163" height="35" />
           </a>
 
-          <ul class="content-options">
+          <ul class="content-options content-options_white">
             <li class="content-options-item">
               <a href="blank.html" class="content-options-link content-options-link_white content-link-into content-link-into_white">Войти</a>
             </li>
@@ -365,22 +363,22 @@
           </li>
         </ul>
 
-        <a href="tel:+749549595995" class="footer-tel">Тел.: +7(495) 495-95-95</a>
+        <a href="tel:+749549595995" class="footer-tel">Тел.: +7 (495) 495-95-95</a>
 
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a href="blank.html" class="footer-social-link">
-              <img src="img/facebook.svg" alt="facebook" width="32" height="32" class="footer-social-logo" />
+            <a href="blank.html" class="footer-social-link" aria-label="facebook">
+              <img src="img/facebook.svg" alt="Логотип facebook" width="32" height="32" class="footer-social-logo" />
             </a>
           </li>
           <li class="footer-social-item">
-            <a href="blank.html" class="footer-social-link">
-              <img src="img/instagram.svg" alt="instagram" width="32" height="32" class="footer-social-logo" />
+            <a href="blank.html" class="footer-social-link" aria-label="instagram">
+              <img src="img/instagram.svg" alt="Логотип instagram" width="32" height="32" class="footer-social-logo" />
             </a>
           </li>
           <li class="footer-social-item">
-            <a href="blank.html" class="footer-social-link">
-              <img src="img/twitter.svg" alt="twitter" width="32" height="32" class="footer-social-logo" />
+            <a href="blank.html" class="footer-social-link" aria-label="twitter">
+              <img src="img/twitter.svg" alt="Логотип twitter" width="32" height="32" class="footer-social-logo" />
             </a>
           </li>
         </ul>

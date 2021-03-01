@@ -7,12 +7,12 @@
     <meta name="keywords" content="HTML, CSS, JS, Git" />
     <meta name="author" content="Artem Rakhimov artemiirakhimov@yandex.ru" />
     <title>HTML Academy: Девайс</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style-min.css" />
     <link rel="icon" href="favicon.ico" />
-    <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="favicon/180.png">
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="favicon/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon/180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
   </head>
   <body class="page-body">
     <header class="header header_page_catalog">
@@ -31,7 +31,7 @@
 
         <ul class="content-options">
           <li class="content-options-item">
-            <a class="content-options-link content-options-link_dark content-link-user content-link-user_dark">Валентин Петухов</a>
+            <a href="blank.html" class="content-options-link content-options-link_dark content-link-user content-link-user_dark">Валентин Петухов</a>
           </li>
           <li class="content-options-item">
             <a href="blank.html" class="content-options-link content-options-link_dark content-link-out content-link-out_dark">Выйти</a>
@@ -48,19 +48,20 @@
 
       <nav class="header-nav">
         <ul class="content-menu content-menu_dark">
-          <li class="content-menu-item content-menu-item_dark">
+          <li class="content-menu-item content-menu-item_dark content-menu-item_submenu">
+            <div class="content-menu-item-wrapper">
             <a href="catalog.html" class="content-link content-link_menu content-link_adv">Каталог товаров</a>
-            <button type="button" name="header-show-submenu" aria-label="Открыть каталог" class="header-show-submenu" title="Открыть каталог"></button>
-            <section class="content-menu-advanced visually-hidden">
-              <ul class="content-submenu">
-                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Виртуальная реальность</a></li>
-                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Фитнес браслеты</a></li>
-                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Квадрокоптер</a></li>
-                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Моноподы для селфи</a></li>
-                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Умные часы</a></li>
-                <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Экшн-камеры</a></li>
-              </ul>
-            </section>
+              <section class="content-menu-advanced">
+                <ul class="content-submenu">
+                  <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Виртуальная реальность</a></li>
+                  <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Фитнес браслеты</a></li>
+                  <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Квадрокоптер</a></li>
+                  <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Моноподы для селфи</a></li>
+                  <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Умные часы</a></li>
+                  <li class="content-submenu-item"><a href="catalog.html" class="content-submenu-link">Экшн-камеры</a></li>
+                </ul>
+              </section>
+            </div>
           </li>
           <li class="content-menu-item content-menu-item_dark"><a href="blank.html" class="content-link content-link_menu">Доставка</a></li>
           <li class="content-menu-item content-menu-item_dark"><a href="blank.html" class="content-link content-link_menu">Гарантия</a></li>
@@ -80,7 +81,7 @@
 
       <section class="filter">
         <h2 class="filter-title">Фильтр:</h2>
-        <form action="https://echo.htmlacademy.ru/" method="POST" class="filter-form">
+        <form action="https://echo.htmlacademy.ru/" method="GET" class="filter-form" target="_blank">
           <fieldset class="filter-fieldset filter-fieldset_range">
             <legend class="filter-form-legend">Стоимость</legend>
             <div class="filter-cost">
@@ -88,8 +89,8 @@
                 <div class="filter-cost-scale">
                   <div class="filter-cost-bar"></div>
                 </div>
-                <div class="filter-cost-toggle filter-cost-toggle_min" tabindex="0"></div>
-                <div class="filter-cost-toggle filter-cost-toggle_max" tabindex="0"></div>
+                <div class="filter-cost-toggle filter-cost-toggle_min" tabindex="0" aria-label="Изменение минимальной цены" title="Изменение минимальной цены"></div>
+                <div class="filter-cost-toggle filter-cost-toggle_max" tabindex="0" aria-label="Изменение максимальной цены" title="Изменение максимальной цены"></div>
               </div>
               <div class="filter-cost-price">
                 <label class="filter-cost-label" aria-label="Начальная цена">от
@@ -167,45 +168,45 @@
           <li class="devices-item">
             <img src="img/stick_1.jpg" alt="Любительская селфи-палка" width="360" height="380" class="devices-image"/>
             <div class="devices-item-wrapper">
-              <h3 class="devices-title">Любительская селфи-палка</h3>
-              <p class="devices-price">1100 руб.</p>
+              <h3 class="devices-title"><a href="blank.html" class="devices-link">Любительская селфи-палка</a></h3>
+              <p class="devices-price">1 100 руб.</p>
             </div>
-            <div class="devices-link-wrapper visually-hidden">
-              <a href="blank.html" class="content-link content-link_option devices-link">В корзину</a>
-              <a href="blank.html" class="devices-link devices-link-compare">Добавить к сравнению</a>
+            <div class="devices-button-wrapper visually-hidden">
+              <button type="button" class="content-link content-link_option devices-button devices-button_cart">В корзину</button>
+              <button type="button" class="devices-button devices-button_compare">Добавить к сравнению</button>
             </div>
           </li>
           <li class="devices-item">
             <img src="img/stick_2.png" alt="Профессиональная селфи-палка" width="360" height="380" class="devices-image"/>
             <div class="devices-item-wrapper">
-              <h3 class="devices-title">Профессиональная<br>селфи-палка</h3>
-              <p class="devices-price">1500 руб.</p>
+              <h3 class="devices-title"><a href="blank.html" class="devices-link">Профессиональная<br>селфи-палка</a></h3>
+              <p class="devices-price">1 500 руб.</p>
             </div>
-            <div class="devices-link-wrapper visually-hidden">
-              <a href="blank.html" class="content-link content-link_option devices-link">В корзину</a>
-              <a href="blank.html" class="devices-link devices-link-compare">Добавить к сравнению</a>
+            <div class="devices-button-wrapper visually-hidden">
+              <button type="button" class="content-link content-link_option devices-button devices-button_cart">В корзину</button>
+              <button type="button" class="devices-button devices-button_compare">Добавить к сравнению</button>
             </div>
           </li>
           <li class="devices-item">
             <img src="img/stick_3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380" class="devices-image"/>
             <div class="devices-item-wrapper">
-              <h3 class="devices-title">Непотопляемая<br>селфи-палка</h3>
-              <p class="devices-price">1500 руб.</p>
+              <h3 class="devices-title"><a href="blank.html" class="devices-link">Непотопляемая<br>селфи-палка</a></h3>
+              <p class="devices-price">1 500 руб.</p>
             </div>
-            <div class="devices-link-wrapper visually-hidden">
-              <a href="blank.html" class="content-link content-link_option devices-link">В корзину</a>
-              <a href="blank.html" class="devices-link devices-link-compare">Добавить к сравнению</a>
+            <div class="devices-button-wrapper visually-hidden">
+              <button type="button" class="content-link content-link_option devices-button devices-button_cart">В корзину</button>
+              <button type="button" class="devices-button devices-button_compare">Добавить к сравнению</button>
             </div>
           </li>
           <li class="devices-item devices-item_new">
             <img src="img/stick_4.png" alt="Селфи-палка 'Следуй за мной'" width="360" height="380" class="devices-image"/>
             <div class="devices-item-wrapper">
-              <h3 class="devices-title">Селфи-палка &laquo;Следуй за мной&raquo;</h3>
-              <p class="devices-price">1900 руб.</p>
+              <h3 class="devices-title"><a href="blank.html" class="devices-link">Селфи-палка &laquo;Следуй за мной&raquo;</a></h3>
+              <p class="devices-price">1 900 руб.</p>
             </div>
-            <div class="devices-link-wrapper visually-hidden">
-              <a href="blank.html" class="content-link content-link_option devices-link">В корзину</a>
-              <a href="blank.html" class="devices-link devices-link-compare">Добавить к сравнению</a>
+            <div class="devices-button-wrapper visually-hidden">
+              <button type="button" class="content-link content-link_option devices-button devices-button_cart">В корзину</button>
+              <button type="button" class="devices-button devices-button_compare">Добавить к сравнению</button>
             </div>
           </li>
         </ul>
@@ -235,9 +236,9 @@
             <img src="img/logo-footer.svg" alt="Логотип магазина Device" class="footer-logo" width="163" height="35" />
           </a>
 
-          <ul class="content-options">
+          <ul class="content-options content-options_white">
             <li class="content-options-item">
-              <a class="content-options-link content-options-link_white content-link-user content-link-user_white">Валентин Петухов</a>
+              <a href="blank.html" class="content-options-link content-options-link_white content-link-user content-link-user_white">Валентин Петухов</a>
             </li>
             <li class="content-options-item">
               <a href="blank.html" class="content-options-link content-options-link_white content-link-out content-link-out_white">Выйти</a>
@@ -269,18 +270,18 @@
 
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a href="blank.html" class="footer-social-link">
-              <img src="img/facebook.svg" alt="facebook" width="32" height="32" class="footer-social-logo" />
+            <a href="blank.html" class="footer-social-link" aria-label="facebook">
+              <img src="img/facebook.svg" alt="Логотип facebook" width="32" height="32" class="footer-social-logo" />
             </a>
           </li>
           <li class="footer-social-item">
-            <a href="blank.html" class="footer-social-link">
-              <img src="img/instagram.svg" alt="instagram" width="32" height="32" class="footer-social-logo" />
+            <a href="blank.html" class="footer-social-link" aria-label="instagram">
+              <img src="img/instagram.svg" alt="Логотип instagram" width="32" height="32" class="footer-social-logo" />
             </a>
           </li>
           <li class="footer-social-item">
-            <a href="blank.html" class="footer-social-link">
-              <img src="img/twitter.svg" alt="twitter" width="32" height="32" class="footer-social-logo" />
+            <a href="blank.html" class="footer-social-link" aria-label="twitter">
+              <img src="img/twitter.svg" alt="Логотип twitter" width="32" height="32" class="footer-social-logo" />
             </a>
           </li>
         </ul>

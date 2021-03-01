@@ -21,49 +21,30 @@ for (let $card of deviceCards) {
   $card.addEventListener("mouseover", (event) => {
     event.target
       .closest(".devices-item")
-      .querySelector(".devices-link-wrapper")
+      .querySelector(".devices-button-wrapper")
       .classList.remove("visually-hidden");
   });
   $card.addEventListener("mouseout", (event) => {
     event.target
       .closest(".devices-item")
-      .querySelector(".devices-link-wrapper")
+      .querySelector(".devices-button-wrapper")
       .classList.add("visually-hidden");
   });
 }
 
-const deviceLinks = document.querySelectorAll(".devices-link");
+const deviceLinks = document.querySelectorAll(".devices-button");
 for (let $link of deviceLinks) {
   $link.addEventListener("focus", (event) => {
     event.target
-      .closest(".devices-link-wrapper")
+      .closest(".devices-button-wrapper")
       .classList.remove("visually-hidden");
   });
   $link.addEventListener("blur", (event) => {
     event.target
-      .closest(".devices-link-wrapper")
+      .closest(".devices-button-wrapper")
       .classList.add("visually-hidden");
   });
 }
-
-// открытие подменю
-const $menuItem = document.querySelector(".content-menu-item");
-const $openSubmenu = $menuItem.querySelector(".header-show-submenu");
-const $submenu = $menuItem.querySelector(".content-menu-advanced");
-$openSubmenu.addEventListener("click", () => {
-  $submenu.classList.remove("visually-hidden");
-});
-$openSubmenu.addEventListener("focus", () => {
-  $submenu.classList.remove("visually-hidden");
-});
-document.addEventListener("keydown", (event) => {
-  if (
-    event.key === "Escape" &&
-    !$submenu.classList.contains("visually-hidden")
-  ) {
-    $submenu.classList.add("visually-hidden");
-  }
-});
 
 // слайдер promo
 const $promoCards = document.querySelectorAll(".promo-product-item");
@@ -79,12 +60,10 @@ function changePromo() {
     }
   }
 }
-
 // по клику
 for (let item of $promoSelects) {
   item.addEventListener("click", changePromo);
 }
-
 // по изменению состояния input
 for (let item of $promoFields) {
   item.addEventListener("change", changePromo);
@@ -104,35 +83,31 @@ function changeService() {
     }
   }
 }
-
 // по клику
 for (let item of $servicesSelects) {
   item.addEventListener("click", changeService);
 }
-
 // по изменинию состояния input
 for (let item of $servicesFields) {
   item.addEventListener("change", changeService);
 }
-
 // модальное окно напишите нам
 const $linkMessage = document.querySelector(".contacts-link-message");
 const $modalMessage = document.querySelector(".modal-message");
 const $closeMessage = document.querySelector(".modal-close_message");
 const $formMessage = document.querySelector(".message-form");
-let currentFocusElement;
+let focusElementPage = null;
 // открытие окна
 $linkMessage.addEventListener("click", (event) => {
   event.preventDefault();
-  // event.stopPropagation();
-  currentFocusElement = document.activeElement;
+  focusElementPage = document.activeElement;
   $modalMessage.classList.add("modal-message_active");
   $formMessage["message-author"].focus();
 });
 // закрытие по клику
 $closeMessage.addEventListener("click", () => {
   $modalMessage.classList.remove("modal-message_active");
-  currentFocusElement.focus();
+  focusElementPage.focus();
 });
 // закрытие клавишей Escape
 document.addEventListener("keydown", (event) => {
@@ -141,7 +116,7 @@ document.addEventListener("keydown", (event) => {
     $modalMessage.classList.contains("modal-message_active")
   ) {
     $modalMessage.classList.remove("modal-message_active");
-    currentFocusElement.focus();
+    focusElementPage.focus();
   }
 });
 // отправка сообщения
