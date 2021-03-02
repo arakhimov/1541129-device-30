@@ -103,6 +103,9 @@ $linkMessage.addEventListener("click", (event) => {
   focusElementPage = document.activeElement;
   $modalMessage.classList.add("modal-message_active");
   $formMessage["message-author"].focus();
+  $formMessage["message-author"].value = "";
+  $formMessage["message-email"].value = "";
+  $formMessage["message-text"].value = "";
 });
 // закрытие по клику
 $closeMessage.addEventListener("click", () => {
@@ -121,10 +124,6 @@ document.addEventListener("keydown", (event) => {
 });
 // отправка сообщения
 $formMessage.addEventListener("submit", (event) => {
-  event.preventDefault();
-  $formMessage["message-author"].value = "";
-  $formMessage["message-email"].value = "";
-  $formMessage["message-text"].value = "";
   $modalMessage.classList.remove("modal-message_active");
 });
 
