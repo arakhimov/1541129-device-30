@@ -21,12 +21,10 @@
       </a>
 
       <div class="header-wrapper">
-        <form action="#" method="GET" class="header-search" name="search">
-          <label for="search-field" aria-label="Поиск по сайту">
-            <img src="img/search.svg" alt="Поиск по сайту" class="header-search-logo" width="12" height="12">
-          </label>
+        <form action="https://echo.htmlacademy.ru/" method="GET" class="header-search" name="search" target="_blank">
+          <label for="search-field" aria-label="Поиск по сайту" class="search-field-label"></label>
           <input type="text" class="header-search-field" aria-label="Поиск по сайту" name="search-field" id="search-field" placeholder="Поиск по сайту" required />
-          <button type="submit" name="search-submit" class="header-search-submit">Найти</button>
+          <button type="submit" class="header-search-submit">Найти</button>
         </form>
 
         <ul class="content-options">
@@ -93,10 +91,10 @@
                 <div class="filter-cost-toggle filter-cost-toggle_max" tabindex="0" aria-label="Изменение максимальной цены" title="Изменение максимальной цены"></div>
               </div>
               <div class="filter-cost-price">
-                <label class="filter-cost-label" aria-label="Начальная цена">от
+                <label class="filter-cost-label" aria-label="Начальная цена от">от
                   <input type="text" class="filter-cost-feild filter-cost-feild_min" name="cost-min" value="0">
                 </label>
-                <label class="filter-cost-label" aria-label="Максимальная цена">до
+                <label class="filter-cost-label" aria-label="Максимальная цена до">до
                   <input type="text" class="filter-cost-feild filter-cost-feild_max" name="cost-max" value="5000">
                 </label>
               </div>
@@ -140,7 +138,7 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit" class="filter-submit">Показать</button>
+          <button type="submit" class="filter-submit" aria-label="Фильтровать товары">Показать</button>
         </form>
       </section>
 
@@ -156,57 +154,65 @@
             </ul>
             <ul class="devices-sort-method-list">
               <li class="devices-sort-method-item">
-                <button type="button" class="devices-sort-button devices-sort-button_up sort-active" aria-label="По возростанию" title="По возростанию"></button>
+                <button type="button" class="devices-sort-button devices-sort-button_up sort-active" aria-label="Сортировка по возростанию" title="Сортировка по возростанию"></button>
               </li>
               <li class="devices-sort-method-item">
-                <button type="button" class="devices-sort-button devices-sort-button_down" aria-label="По убыванию" title="По убыванию"></button>
+                <button type="button" class="devices-sort-button devices-sort-button_down" aria-label="Сортировка по убыванию" title="Сортировка по убыванию"></button>
               </li>
             </ul>
           </div>
         </header>
         <ul class="devices-list">
           <li class="devices-item">
-            <img src="img/stick_1.jpg" alt="Любительская селфи-палка" width="360" height="380" class="devices-image"/>
             <div class="devices-item-wrapper">
               <h3 class="devices-title"><a href="blank.html" class="devices-link">Любительская селфи-палка</a></h3>
               <p class="devices-price">1 100 руб.</p>
             </div>
+            <img src="img/stick_1.jpg" alt="Cелфи-палка c держателем для телефона" width="360" height="380" class="devices-image"/>
             <div class="devices-button-wrapper visually-hidden">
-              <button type="button" class="content-link content-link_option devices-button devices-button_cart">В корзину</button>
-              <button type="button" class="devices-button devices-button_compare">Добавить к сравнению</button>
+              <button type="button" class="content-link content-link_option devices-button devices-button_cart"
+                aria-label="Добавить товар 'Любительская селфи-палка' в корзину">В корзину</button>
+              <button type="button" class="devices-button devices-button_compare"
+                aria-label="Добавить товар 'Любительская селфи-палка' к сравнению">Добавить к сравнению</button>
             </div>
           </li>
           <li class="devices-item">
-            <img src="img/stick_2.png" alt="Профессиональная селфи-палка" width="360" height="380" class="devices-image"/>
             <div class="devices-item-wrapper">
               <h3 class="devices-title"><a href="blank.html" class="devices-link">Профессиональная<br>селфи-палка</a></h3>
               <p class="devices-price">1 500 руб.</p>
             </div>
+            <img src="img/stick_2.png" alt="Cелфи-палка с фиксацией положения" width="360" height="380" class="devices-image"/>
             <div class="devices-button-wrapper visually-hidden">
-              <button type="button" class="content-link content-link_option devices-button devices-button_cart">В корзину</button>
-              <button type="button" class="devices-button devices-button_compare">Добавить к сравнению</button>
+              <button type="button" class="content-link content-link_option devices-button devices-button_cart"
+                aria-label="Добавить товар 'Профессиональная селфи-палка' в корзину">В корзину</button>
+              <button type="button" class="devices-button devices-button_compare"
+                aria-label="Добавить товар 'Профессиональная селфи-палка' к сравнению">Добавить к сравнению</button>
             </div>
           </li>
           <li class="devices-item">
-            <img src="img/stick_3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380" class="devices-image"/>
             <div class="devices-item-wrapper">
               <h3 class="devices-title"><a href="blank.html" class="devices-link">Непотопляемая<br>селфи-палка</a></h3>
               <p class="devices-price">1 500 руб.</p>
             </div>
+            <img src="img/stick_3.jpg" alt="Cелфи-палка с возможностью подводной съемки" width="360" height="380" class="devices-image"/>
             <div class="devices-button-wrapper visually-hidden">
-              <button type="button" class="content-link content-link_option devices-button devices-button_cart">В корзину</button>
-              <button type="button" class="devices-button devices-button_compare">Добавить к сравнению</button>
+              <button type="button" class="content-link content-link_option devices-button devices-button_cart"
+                aria-label="Добавить товар 'Непотопляемая селфи-палка' в корзину">В корзину</button>
+              <button type="button" class="devices-button devices-button_compare"
+                aria-label="Добавить товар 'Непотопляемая селфи-палка' к сравнению">Добавить к сравнению</button>
             </div>
           </li>
           <li class="devices-item devices-item_new">
-            <img src="img/stick_4.png" alt="Селфи-палка 'Следуй за мной'" width="360" height="380" class="devices-image"/>
             <div class="devices-item-wrapper">
               <h3 class="devices-title"><a href="blank.html" class="devices-link">Селфи-палка &laquo;Следуй за мной&raquo;</a></h3>
               <p class="devices-price">1 900 руб.</p>
             </div>
+            <img src="img/stick_4.png" alt="Селфи-палка в форме руки" width="360" height="380" class="devices-image"/>
             <div class="devices-button-wrapper visually-hidden">
-              <button type="button" class="content-link content-link_option devices-button devices-button_cart">В корзину</button>
-              <button type="button" class="devices-button devices-button_compare">Добавить к сравнению</button>
+              <button type="button" class="content-link content-link_option devices-button devices-button_cart"
+                aria-label="Добавить товар 'Селфи-палка 'Следуй за мной' в корзину">В корзину</button>
+              <button type="button" class="devices-button devices-button_compare"
+                aria-label="Добавить товар 'Селфи-палка 'Следуй за мной' к сравнению">Добавить к сравнению</button>
             </div>
           </li>
         </ul>
@@ -216,9 +222,9 @@
             <span class="device-button-desc">Назад</span>
           </button>
           <ul class="devices-pages-list">
-            <li class="devices-pages-item"><a class="devices-pages-link current-page">1</a></li>
-            <li class="devices-pages-item"><a href="" class="devices-pages-link">2</a></li>
-            <li class="devices-pages-item"><a href="" class="devices-pages-link">3</a></li>
+            <li class="devices-pages-item"><a class="devices-pages-link current-page" aria-label="Страница 1">1</a></li>
+            <li class="devices-pages-item"><a href="blank.html" class="devices-pages-link" aria-label="Страница 2">2</a></li>
+            <li class="devices-pages-item"><a href="blank.html" class="devices-pages-link" aria-label="Страница 3">3</a></li>
           </ul>
           <button type="button" class="buttons-back-forward">
             <span class="device-button-desc">Вперед</span>
@@ -286,8 +292,8 @@
           </li>
         </ul>
 
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="study-center-link" >
-          <img src="img/html-academy.svg" alt="HTMLAcademy" width="27"  height="34" class="study-center-logo" />
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="study-center-link" aria-label="HTMLAcademy">
+          <img src="img/html-academy.svg" alt="Логотип HTMLAcademy" width="27"  height="34" class="study-center-logo" />
         </a>
       </div>
     </footer>
