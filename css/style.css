@@ -1930,14 +1930,51 @@
 
 /* ****************модальные окна**************** */
 
+/* Анимация при открытии окна */
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Анимация при ошибке валидации */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal {
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   position: fixed;
-  left: 50%;
-  top: 50%;
   z-index: 200;
-  transform: translate(-50%, -50%);
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 .modal-message {
@@ -1951,6 +1988,11 @@
 
 .modal-message_active {
   display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-message_error {
+  animation: shake 0.6s;
 }
 
 .message-form {
@@ -2058,6 +2100,8 @@
 }
 
 .modal-map {
+  top: 50%;
+  transform: translateY(-50%);
   display: none;
   width: 994px;
   min-height: 593px;

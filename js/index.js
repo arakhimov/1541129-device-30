@@ -1,50 +1,3 @@
-// Активация кнопки поиска и отправки формы
-const $searchForm = document.querySelector(".header-search");
-const $searchField = $searchForm["search-field"];
-const $searchSubmit = $searchForm.querySelector(".header-search-submit");
-
-$searchField.addEventListener("focus", () => {
-  $searchSubmit.classList.add("header-search-submit_active");
-  $searchForm.classList.add("header-search_active");
-  $searchForm.reset();
-});
-
-$searchForm.addEventListener("submit", (event) => {
-  $searchSubmit.classList.remove("header-search-submit_active");
-  $searchForm.classList.remove("header-search_active");
-});
-
-// Отображение ссылок при наведении на карточку и фокусе на ссылку
-const deviceCards = document.querySelectorAll(".devices-item");
-for (let $card of deviceCards) {
-  $card.addEventListener("mouseover", (event) => {
-    event.target
-      .closest(".devices-item")
-      .querySelector(".devices-button-wrapper")
-      .classList.remove("visually-hidden");
-  });
-  $card.addEventListener("mouseout", (event) => {
-    event.target
-      .closest(".devices-item")
-      .querySelector(".devices-button-wrapper")
-      .classList.add("visually-hidden");
-  });
-}
-
-const deviceLinks = document.querySelectorAll(".devices-button");
-for (let $link of deviceLinks) {
-  $link.addEventListener("focus", (event) => {
-    event.target
-      .closest(".devices-button-wrapper")
-      .classList.remove("visually-hidden");
-  });
-  $link.addEventListener("blur", (event) => {
-    event.target
-      .closest(".devices-button-wrapper")
-      .classList.add("visually-hidden");
-  });
-}
-
 // слайдер promo
 const $promoCards = document.querySelectorAll(".promo-product-item");
 const $promoSelects = document.querySelectorAll(".promo-choise-label");
@@ -59,10 +12,12 @@ function changePromo() {
     }
   }
 }
+
 // по клику
 for (let item of $promoSelects) {
   item.addEventListener("click", changePromo);
 }
+
 // по изменению состояния input
 for (let item of $promoFields) {
   item.addEventListener("change", changePromo);
@@ -82,33 +37,57 @@ function changeService() {
     }
   }
 }
+
 // по клику
 for (let item of $servicesSelects) {
   item.addEventListener("click", changeService);
 }
+
 // по изменинию состояния input
 for (let item of $servicesFields) {
   item.addEventListener("change", changeService);
 }
+
 // модальное окно напишите нам
 const $linkMessage = document.querySelector(".contacts-link-message");
 const $modalMessage = document.querySelector(".modal-message");
 const $closeMessage = document.querySelector(".modal-close_message");
 const $formMessage = document.querySelector(".message-form");
 let focusElementPage = null;
+let storageAuthor = "";
+let storageEmail = "";
+let isStoragesupport = true;
+
+// проверка поддержки localStorage
+try {
+  storageAuthor = localStorage.getItem("storageAuthor");
+  storageEmail = localStorage.getItem("storageEmail");
+} catch {
+  isStoragesupport = false;
+}
+
 // открытие окна
 $linkMessage.addEventListener("click", (event) => {
   event.preventDefault();
+  $formMessage.reset();
   focusElementPage = document.activeElement;
   $modalMessage.classList.add("modal-message_active");
-  $formMessage["message-author"].focus();
-  $formMessage.reset();
+  if (storageAuthor && storageEmail) {
+    $formMessage.author.value = storageAuthor;
+    $formMessage.email.value = storageEmail;
+    $formMessage.text.focus();
+  } else {
+    $formMessage.author.focus();
+  }
 });
+
 // закрытие по клику
 $closeMessage.addEventListener("click", () => {
   $modalMessage.classList.remove("modal-message_active");
+  $modalMessage.classList.remove("modal-message_error");
   focusElementPage.focus();
 });
+
 // закрытие клавишей Escape
 document.addEventListener("keydown", (event) => {
   if (
@@ -116,27 +95,46 @@ document.addEventListener("keydown", (event) => {
     $modalMessage.classList.contains("modal-message_active")
   ) {
     $modalMessage.classList.remove("modal-message_active");
+    $modalMessage.classList.remove("modal-message_error");
     focusElementPage.focus();
   }
 });
+
 // отправка сообщения
 $formMessage.addEventListener("submit", (event) => {
-  $modalMessage.classList.remove("modal-message_active");
+  const fields = [$formMessage.author, $formMessage.email, $formMessage.text];
+  if (!fields.every((item) => item.value !== "")) {
+    event.preventDefault();
+    $modalMessage.classList.remove("modal-message_error");
+    $modalMessage.offsetWidth = $modalMessage.offsetWidth;
+    $modalMessage.classList.add("modal-message_error");
+    fields.find((item) => item.value === "").focus();
+  } else {
+    if (isStoragesupport) {
+      localStorage.setItem("storageAuthor", $formMessage.author.value);
+      localStorage.setItem("storageEmail", $formMessage.email.value);
+    }
+    $modalMessage.classList.remove("modal-message_active");
+  }
+  focusElementPage.focus();
 });
 
 // модальное окно как до нас добраться
 const $linkMap = document.querySelector(".contacts-link");
 const $modalMap = document.querySelector(".modal-map");
 const $closeMap = document.querySelector(".modal-close_map");
+
 // открытие окна
 $linkMap.addEventListener("click", (event) => {
   event.preventDefault();
   $modalMap.classList.add("modal-map_active");
 });
+
 // закрытие по клику
 $closeMap.addEventListener("click", () => {
   $modalMap.classList.remove("modal-map_active");
 });
+
 // закрытие клавишей Escape
 document.addEventListener("keydown", (event) => {
   if (
