@@ -1,9 +1,17 @@
 // слайдер promo
 const $promoCards = document.querySelectorAll(".promo-product-item");
-const $promoSelects = document.querySelectorAll(".promo-choise-label");
-const $promoFields = document.querySelectorAll(".promo-choise");
+const $promoButtons = document.querySelectorAll(".promo-choiсe-button");
 
 function changePromo() {
+  for (let button of $promoButtons) {
+    if (button.dataset.choice === event.target.dataset.choice) {
+      button.classList.add("promo-choiсe-button_active");
+      button.setAttribute("aria-pressed", true);
+    } else {
+      button.classList.remove("promo-choiсe-button_active");
+      button.setAttribute("aria-pressed", false);
+    }
+  }
   for (let card of $promoCards) {
     if (card.dataset.type === event.target.dataset.choice) {
       card.classList.add("promo-product-item_active");
@@ -13,22 +21,25 @@ function changePromo() {
   }
 }
 
-// по клику
-for (let item of $promoSelects) {
-  item.addEventListener("click", changePromo);
-}
-
-// по изменению состояния input
-for (let item of $promoFields) {
-  item.addEventListener("change", changePromo);
+for (let item of $promoButtons) {
+  item.addEventListener("focus", changePromo);
 }
 
 // слайдер services
 const $servicesCards = document.querySelectorAll(".services-item");
-const $servicesFields = document.querySelectorAll(".services-choise");
-const $servicesSelects = document.querySelectorAll(".services-choise-label");
+const $servicesButtons = document.querySelectorAll(".services-button");
 
 function changeService() {
+  for (let button of $servicesButtons) {
+    if (button.dataset.servicesChoice === event.target.dataset.servicesChoice) {
+      button.classList.add("services-button_active");
+      button.setAttribute("aria-pressed", true);
+    } else {
+      button.classList.remove("services-button_active");
+      button.setAttribute("aria-pressed", false);
+    }
+  }
+
   for (let card of $servicesCards) {
     if (card.dataset.servicesType === event.target.dataset.servicesChoice) {
       card.classList.add("services-item_active");
@@ -38,14 +49,8 @@ function changeService() {
   }
 }
 
-// по клику
-for (let item of $servicesSelects) {
-  item.addEventListener("click", changeService);
-}
-
-// по изменинию состояния input
-for (let item of $servicesFields) {
-  item.addEventListener("change", changeService);
+for (let item of $servicesButtons) {
+  item.addEventListener("focus", changeService);
 }
 
 // модальное окно напишите нам
@@ -53,6 +58,7 @@ const $linkMessage = document.querySelector(".contacts-link-message");
 const $modalMessage = document.querySelector(".modal-message");
 const $closeMessage = document.querySelector(".modal-close_message");
 const $formMessage = document.querySelector(".message-form");
+const fields = [$formMessage.author, $formMessage.email, $formMessage.text];
 let focusElementPage = null;
 let storageAuthor = "";
 let storageEmail = "";
@@ -67,7 +73,7 @@ try {
 }
 
 // открытие окна
-$linkMessage.addEventListener("click", (event) => {
+function openForm(event) {
   event.preventDefault();
   $formMessage.reset();
   focusElementPage = document.activeElement;
@@ -79,45 +85,68 @@ $linkMessage.addEventListener("click", (event) => {
   } else {
     $formMessage.author.focus();
   }
-});
+}
+$linkMessage.addEventListener("click", openForm);
 
 // закрытие по клику
 $closeMessage.addEventListener("click", () => {
   $modalMessage.classList.remove("modal-message_active");
   $modalMessage.classList.remove("modal-message_error");
+  fields.forEach((item) => item.classList.remove("message-form-field_invalid"));
   focusElementPage.focus();
 });
 
 // закрытие клавишей Escape
-document.addEventListener("keydown", (event) => {
+function closeForm(event) {
   if (
     event.key === "Escape" &&
     $modalMessage.classList.contains("modal-message_active")
   ) {
     $modalMessage.classList.remove("modal-message_active");
     $modalMessage.classList.remove("modal-message_error");
+    fields.forEach((item) =>
+      item.classList.remove("message-form-field_invalid")
+    );
     focusElementPage.focus();
   }
-});
+}
+document.addEventListener("keydown", closeForm);
+
+// валидация полей
+function isValidField(field) {
+  if (field.value === "") {
+    field.classList.add("message-form-field_invalid");
+    return false;
+  } else {
+    field.classList.remove("message-form-field_invalid");
+    return true;
+  }
+}
+
+// слушатели на изменение текстового поля
+for (let field of fields) {
+  field.addEventListener("input", (event) => isValidField(event.target));
+}
 
 // отправка сообщения
-$formMessage.addEventListener("submit", (event) => {
-  const fields = [$formMessage.author, $formMessage.email, $formMessage.text];
-  if (!fields.every((item) => item.value !== "")) {
+function submitForm(event) {
+  if (!fields.every((item) => isValidField(item))) {
     event.preventDefault();
     $modalMessage.classList.remove("modal-message_error");
     $modalMessage.offsetWidth = $modalMessage.offsetWidth;
     $modalMessage.classList.add("modal-message_error");
-    fields.find((item) => item.value === "").focus();
+    let invalidField = fields.find((item) => !isValidField(item));
+    invalidField.focus();
   } else {
     if (isStoragesupport) {
       localStorage.setItem("storageAuthor", $formMessage.author.value);
       localStorage.setItem("storageEmail", $formMessage.email.value);
     }
     $modalMessage.classList.remove("modal-message_active");
+    $modalMessage.classList.remove("modal-message_error");
   }
-  focusElementPage.focus();
-});
+}
+$formMessage.addEventListener("submit", submitForm);
 
 // модальное окно как до нас добраться
 const $linkMap = document.querySelector(".contacts-link");

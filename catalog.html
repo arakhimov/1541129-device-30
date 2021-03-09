@@ -23,7 +23,7 @@
       <div class="header-wrapper">
         <form action="https://echo.htmlacademy.ru/" method="GET" class="header-search" name="search" target="_blank">
           <label for="search-field" aria-label="Поиск по сайту" class="search-field-label"></label>
-          <input type="text" class="header-search-field" aria-label="Поиск по сайту" name="search-field" id="search-field" placeholder="Поиск по сайту" required />
+          <input type="search" class="header-search-field" aria-label="Поиск по сайту" name="search-field" id="search-field" placeholder="Поиск по сайту" required />
           <button type="submit" class="header-search-submit">Найти</button>
         </form>
 
@@ -81,7 +81,7 @@
         <h2 class="filter-title">Фильтр:</h2>
         <form action="https://echo.htmlacademy.ru/" method="GET" class="filter-form" target="_blank">
           <fieldset class="filter-fieldset filter-fieldset_range">
-            <legend class="filter-form-legend">Стоимость</legend>
+            <h3 class="filter-form-subtitle">Стоимость</h3>
             <div class="filter-cost">
               <div class="filter-cost-controls">
                 <div class="filter-cost-scale">
@@ -101,7 +101,7 @@
             </div>
           </fieldset>
           <fieldset class="filter-fieldset filter-fieldset_color">
-            <legend class="filter-form-legend">Цвет</legend>
+            <h3 class="filter-form-subtitle">Цвет</h3>
             <ul class="filter-color-list">
               <li class="filter-color-item">
                 <input type="checkbox" class="filter-color-field visually-hidden" id="color-black" name="color-black" checked />
@@ -126,7 +126,7 @@
             </ul>
           </fieldset>
           <fieldset class="filter-fieldset filter-fieldset_bluetooth">
-            <legend class="filter-form-legend">Bluetooth</legend>
+            <h3 class="filter-form-subtitle">Bluetooth</h3>
             <ul class="filter-bluetooth-list">
               <li class="filter-bluetooth-item">
                 <input type="radio" name="bluetooth" value="on" class="filter-bluetooth-field visually-hidden" id="bluetooth-field-on" checked/>
@@ -154,10 +154,12 @@
             </ul>
             <ul class="devices-sort-method-list">
               <li class="devices-sort-method-item">
-                <button type="button" class="devices-sort-button devices-sort-button_up sort-active" aria-label="Сортировка по возростанию" title="Сортировка по возростанию"></button>
+                <a href="blank.html" class="devices-sort-link devices-sort-link_up devices-sort-link_active"
+                  aria-label="Сортировка по возростанию" title="Сортировка по возростанию"></a>
               </li>
               <li class="devices-sort-method-item">
-                <button type="button" class="devices-sort-button devices-sort-button_down" aria-label="Сортировка по убыванию" title="Сортировка по убыванию"></button>
+                <a href="blank.html" class="devices-sort-link devices-sort-link_down"
+                  aria-label="Сортировка по убыванию" title="Сортировка по убыванию"></a>
               </li>
             </ul>
           </div>
@@ -165,72 +167,73 @@
         <ul class="devices-list">
           <li class="devices-item">
             <div class="devices-item-wrapper">
-              <h3 class="devices-title"><a href="blank.html" class="devices-link">Любительская селфи-палка</a></h3>
+              <h3 class="devices-title"><a href="blank.html" class="devices-main-link">Любительская селфи-палка</a></h3>
               <p class="devices-price">1 100 руб.</p>
             </div>
             <img src="img/stick_1.jpg" alt="Cелфи-палка c держателем для телефона" width="360" height="380" class="devices-image"/>
-            <div class="devices-button-wrapper visually-hidden">
-              <button type="button" class="content-link content-link_option devices-button devices-button_cart"
-                aria-label="Добавить товар 'Любительская селфи-палка' в корзину">В корзину</button>
-              <button type="button" class="devices-button devices-button_compare"
-                aria-label="Добавить товар 'Любительская селфи-палка' к сравнению">Добавить к сравнению</button>
+            <div class="devices-link-wrapper visually-hidden">
+              <a href="blank.html" class="content-link content-link_option devices-link devices-link_cart"
+                aria-label="Добавить товар 'Любительская селфи-палка' в корзину">В корзину</a>
+              <a href="blank.html" class="devices-link devices-link_compare"
+                aria-label="Добавить товар 'Любительская селфи-палка' к сравнению">Добавить к сравнению</a>
             </div>
           </li>
           <li class="devices-item">
             <div class="devices-item-wrapper">
-              <h3 class="devices-title"><a href="blank.html" class="devices-link">Профессиональная<br>селфи-палка</a></h3>
+              <h3 class="devices-title"><a href="blank.html" class="devices-main-link">Профессиональная<br>селфи-палка</a></h3>
               <p class="devices-price">1 500 руб.</p>
             </div>
-            <img src="img/stick_2.png" alt="Cелфи-палка с фиксацией положения" width="360" height="380" class="devices-image"/>
-            <div class="devices-button-wrapper visually-hidden">
-              <button type="button" class="content-link content-link_option devices-button devices-button_cart"
-                aria-label="Добавить товар 'Профессиональная селфи-палка' в корзину">В корзину</button>
-              <button type="button" class="devices-button devices-button_compare"
-                aria-label="Добавить товар 'Профессиональная селфи-палка' к сравнению">Добавить к сравнению</button>
+            <img src="img/stick_2.jpg" alt="Cелфи-палка с фиксацией положения" width="360" height="380" class="devices-image"/>
+            <div class="devices-link-wrapper visually-hidden">
+              <a href="blank.html" class="content-link content-link_option devices-link devices-link_cart"
+                aria-label="Добавить товар 'Профессиональная селфи-палка' в корзину">В корзину</a>
+              <a href="blank.html" class="devices-link devices-link_compare"
+                aria-label="Добавить товар 'Профессиональная селфи-палка' к сравнению">Добавить к сравнению</a>
             </div>
           </li>
           <li class="devices-item">
             <div class="devices-item-wrapper">
-              <h3 class="devices-title"><a href="blank.html" class="devices-link">Непотопляемая<br>селфи-палка</a></h3>
+              <h3 class="devices-title"><a href="blank.html" class="devices-main-link">Непотопляемая<br>селфи-палка</a></h3>
               <p class="devices-price">1 500 руб.</p>
             </div>
             <img src="img/stick_3.jpg" alt="Cелфи-палка с возможностью подводной съемки" width="360" height="380" class="devices-image"/>
-            <div class="devices-button-wrapper visually-hidden">
-              <button type="button" class="content-link content-link_option devices-button devices-button_cart"
-                aria-label="Добавить товар 'Непотопляемая селфи-палка' в корзину">В корзину</button>
-              <button type="button" class="devices-button devices-button_compare"
-                aria-label="Добавить товар 'Непотопляемая селфи-палка' к сравнению">Добавить к сравнению</button>
+            <div class="devices-link-wrapper visually-hidden">
+              <a href="blank.html" class="content-link content-link_option devices-link devices-link_cart"
+                aria-label="Добавить товар 'Непотопляемая селфи-палка' в корзину">В корзину</a>
+              <a href="blank.html" class="devices-link devices-link_compare"
+                aria-label="Добавить товар 'Непотопляемая селфи-палка' к сравнению">Добавить к сравнению</a>
             </div>
           </li>
           <li class="devices-item devices-item_new">
             <div class="devices-item-wrapper">
-              <h3 class="devices-title"><a href="blank.html" class="devices-link">Селфи-палка &laquo;Следуй за мной&raquo;</a></h3>
+              <h3 class="devices-title"><a href="blank.html" class="devices-main-link">Селфи-палка &laquo;Следуй за мной&raquo;</a></h3>
               <p class="devices-price">1 900 руб.</p>
             </div>
-            <img src="img/stick_4.png" alt="Селфи-палка в форме руки" width="360" height="380" class="devices-image"/>
-            <div class="devices-button-wrapper visually-hidden">
-              <button type="button" class="content-link content-link_option devices-button devices-button_cart"
-                aria-label="Добавить товар 'Селфи-палка 'Следуй за мной' в корзину">В корзину</button>
-              <button type="button" class="devices-button devices-button_compare"
-                aria-label="Добавить товар 'Селфи-палка 'Следуй за мной' к сравнению">Добавить к сравнению</button>
+            <img src="img/stick_4.jpg" alt="Селфи-палка в форме руки" width="360" height="380" class="devices-image"/>
+            <div class="devices-link-wrapper visually-hidden">
+              <a href="blank.html" class="content-link content-link_option devices-link devices-link_cart"
+                aria-label="Добавить товар 'Селфи-палка 'Следуй за мной' в корзину">В корзину</a>
+              <a href="blank.html" class="devices-link devices-link_compare"
+                aria-label="Добавить товар 'Селфи-палка 'Следуй за мной' к сравнению">Добавить к сравнению</a>
             </div>
           </li>
         </ul>
 
         <footer class="devices-footer">
-          <button type="button" class="buttons-back-forward" disabled>
-            <span class="device-button-desc">Назад</span>
-          </button>
+          <a class="devices-footer-link devices-footer-link_back devices-footer-link_disabled" aria-label="Следующая страница с товарами назад">
+            <span class="devices-footer-link-desk devices-footer-link-desk_back">Назад</span>
+          </a>
           <ul class="devices-pages-list">
             <li class="devices-pages-item"><a class="devices-pages-link current-page" aria-label="Страница 1">1</a></li>
             <li class="devices-pages-item"><a href="blank.html" class="devices-pages-link" aria-label="Страница 2">2</a></li>
             <li class="devices-pages-item"><a href="blank.html" class="devices-pages-link" aria-label="Страница 3">3</a></li>
           </ul>
-          <button type="button" class="buttons-back-forward">
-            <span class="device-button-desc">Вперед</span>
-          </button>
+          <a href="blank.html" class="devices-footer-link devices-footer-link_forward" aria-label="Следующая страница с товарами вперед">
+            <span class="devices-footer-link-desk devices-footer-link-desk_forward">Вперед</span>
+          </a>
         </footer>
       </section>
+
     </main>
 
 
@@ -272,23 +275,17 @@
           </li>
         </ul>
 
-        <a href="tel:+749549595995" class="footer-tel">Тел.: +7(495) 495-95-95</a>
+        <a href="tel:+749549595995" class="footer-tel">Тел.: +7 (495) 495-95-95</a>
 
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a href="blank.html" class="footer-social-link" aria-label="facebook">
-              <img src="img/facebook.svg" alt="Логотип facebook" width="32" height="32" class="footer-social-logo" />
-            </a>
+            <a href="blank.html" class="footer-social-link footer-social-link_facebook" aria-label="facebook"></a>
           </li>
           <li class="footer-social-item">
-            <a href="blank.html" class="footer-social-link" aria-label="instagram">
-              <img src="img/instagram.svg" alt="Логотип instagram" width="32" height="32" class="footer-social-logo" />
-            </a>
+            <a href="blank.html" class="footer-social-link footer-social-link_instagram" aria-label="instagram"></a>
           </li>
           <li class="footer-social-item">
-            <a href="blank.html" class="footer-social-link" aria-label="twitter">
-              <img src="img/twitter.svg" alt="Логотип twitter" width="32" height="32" class="footer-social-logo" />
-            </a>
+            <a href="blank.html" class="footer-social-link footer-social-link_twitter" aria-label="twitter"></a>
           </li>
         </ul>
 

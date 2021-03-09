@@ -23,7 +23,7 @@
       <div class="header-wrapper">
         <form action="https://echo.htmlacademy.ru/" method="GET" class="header-search" name="search" target="_blank">
           <label for="search-field" aria-label="Поиск по сайту" class="search-field-label"></label>
-          <input type="text" class="header-search-field" aria-label="Поиск по сайту" name="search-field" id="search-field" placeholder="Поиск по сайту" required />
+          <input type="search" class="header-search-field" aria-label="Поиск по сайту" name="search-field" id="search-field" placeholder="Поиск по сайту" required />
           <button type="submit" class="header-search-submit">Найти</button>
         </form>
 
@@ -69,20 +69,18 @@
 
       <section class="promo container">
         <h2 class="visually-hidden">Хиты товаров</h2>
-        <ul class="promo-choise-list">
-          <li class="promo-choise-item">
-            <input type="radio" class="promo-choise visually-hidden" data-choice="selfi-stick" name="promo-roduct" id="selfie-stick" value="selfie-stick" aria-label="Карточка товара - самая длинная селфи-палка" checked />
-            <label for="selfie-stick" class="promo-choise-label" data-choice="selfi-stick"></label>
-          </li>
-          <li class="promo-choise-item">
-            <input type="radio" class="promo-choise visually-hidden" data-choice="fitness-tracker" name="promo-roduct" id="fitness-tracker" value="fitness-tracker" aria-label="Карточка товара - фитнес-браслет" />
-            <label for="fitness-tracker" class="promo-choise-label" data-choice="fitness-tracker"></label>
-          </li>
-          <li class="promo-choise-item">
-            <input type="radio" class="promo-choise visually-hidden" data-choice="quadcopter" name="promo-roduct" id="quadcopter" value="quadcopter" aria-label="Карточка товара - квадрокоптер" />
-            <label for="quadcopter" class="promo-choise-label" data-choice="quadcopter"></label>
-          </li>
-        </ul>
+
+        <div class="promo-controls">
+          <button type="button" class="promo-choiсe-button promo-choiсe-button_active" data-choice="selfi-stick"
+            aria-label="Карточка товара - самая длинная селфи-палка" aria-pressed="true"
+            title="Карточка товара - самая длинная селфи-палка"></button>
+          <button type="button" class="promo-choiсe-button" data-choice="fitness-tracker"
+            aria-label="Карточка товара - фитнес-браслет" aria-pressed="false"
+            title="Карточка товара - фитнес-браслет"></button>
+          <button type="button" class="promo-choiсe-button" data-choice="quadcopter"
+            aria-label="Карточка товара - квадрокоптер" aria-pressed="false"
+            title="Карточка товара - квадрокоптер"></button>
+        </div>
 
         <ul class="promo-product-list">
           <li class="promo-product-item promo-product-item_active" data-type="selfi-stick">
@@ -151,11 +149,10 @@
                   </tr>
                   <tr class="promo-table-row">
                     <th class="promo-table-header">Дальность полёта</th>
-                    <th class="promo-table-header">Радиус поражения</th>
+                    <th class="promo-table-header promo-table-header_third-card">Радиус поражения</th>
                   </tr>
                 </table>
               </div>
-
             </article>
           </li>
         </ul>
@@ -165,51 +162,33 @@
         <h2 class="visually-hidden">Категории товаров</h2>
         <ul class="device-types-list">
           <li class="device-types-item">
-            <a href="catalog.html" class="device-types-link">
-              <h3 class="device-types-title">Виртуальная реальность</h3>
-              <div class="device-types-wrapper">
-                <img src="img/virtual-reality.svg" alt="Изображение очки виртуальной реальности" width="97" height="55" class="device-types-image" />
-              </div>
+            <a href="catalog.html" class="device-types-link device-types-link_reality">
+              <span class="device-types-text">Виртуальная реальность</span>
             </a>
           </li>
           <li class="device-types-item">
-            <a href="catalog.html" class="device-types-link">
-              <h3 class="device-types-title">Моноподы<br />для селфи</h3>
-              <div class="device-types-wrapper">
-                <img src="img/selfi-stick.svg" alt="Изображение селфи-палки" width="86" height="117" class="device-types-image device-types-image_stick" />
-              </div>
+            <a href="catalog.html" class="device-types-link device-types-link_stick">
+              <span class="device-types-text">Моноподы<br />для селфи</span>
             </a>
           </li>
           <li class="device-types-item">
-            <a href="catalog.html" class="device-types-link">
-              <h3 class="device-types-title">Экшн-камеры</h3>
-              <div class="device-types-wrapper">
-                <img src="img/action-camera.svg" alt="Изображение экшн-камеры" width="71" height="87" class="device-types-image" />
-              </div>
+            <a href="catalog.html" class="device-types-link device-types-link_action">
+              <span class="device-types-text">Экшн-камеры</span>
             </a>
           </li>
           <li class="device-types-item">
-            <a href="catalog.html" class="device-types-link">
-              <h3 class="device-types-title">Фитнес-браслеты</h3>
-              <div class="device-types-wrapper">
-                <img src="img/fitness-bracelet.svg" alt="Изображение итнес-браслета" width="107" height="65" class="device-types-image" />
-              </div>
+            <a href="catalog.html" class="device-types-link device-types-link_fitness">
+              <span class="device-types-text">Фитнес-браслеты</span>
             </a>
           </li>
           <li class="device-types-item">
-            <a href="catalog.html" class="device-types-link">
-              <h3 class="device-types-title">Умные часы</h3>
-              <div class="device-types-wrapper">
-                <img src="img/smart-clock.svg" alt="Изображение умных часов" width="56" height="98" class="device-types-image" />
-              </div>
+            <a href="catalog.html" class="device-types-link device-types-link_smart">
+              <span class="device-types-text">Умные часы</span>
             </a>
           </li>
           <li class="device-types-item">
-            <a href="catalog.html" class="device-types-link">
-              <h3 class="device-types-title">Квадрокоптеры</h3>
-              <div class="device-types-wrapper">
-                <img src="img/quadcopter.svg" alt="Изображение вадрокоптера" width="132" height="69" class="device-types-image" />
-              </div>
+            <a href="catalog.html" class="device-types-link device-types-link_quadro">
+              <span class="device-types-text">Квадрокоптеры</span>
             </a>
           </li>
         </ul>
@@ -217,20 +196,15 @@
 
       <section class="services">
         <h2 class="visually-hidden">Наши услуги</h2>
-        <ul class="services-choice-list">
-          <li class="services-choice-item">
-            <input type="radio" class="services-choise visually-hidden" data-services-choice="delivery" name="services-roduct" value="delivery" id="delivery" checked />
-            <label for="delivery" class="services-choise-label" data-services-choice="delivery">Доставка</label>
-          </li>
-          <li class="services-choice-item">
-            <input type="radio" class="services-choise visually-hidden" data-services-choice="warranty" name="services-roduct" value="warranty" id="warranty" />
-            <label for="warranty" class="services-choise-label" data-services-choice="warranty">Гарантия</label>
-          </li>
-          <li class="services-choice-item">
-            <input type="radio" class="services-choise visually-hidden" data-services-choice="credit" name="services-roduct" value="credit" id="credit" />
-            <label for="credit" class="services-choise-label" data-services-choice="credit">Кредит</label>
-          </li>
-        </ul>
+
+        <div class="services-controls">
+          <button type="button" class="services-button services-button_active" data-services-choice="delivery"
+            aria-pressed="true">Доставка</button>
+          <button type="button" class="services-button" data-services-choice="warranty"
+            aria-pressed="false">Гарантия</button>
+          <button type="button" class="services-button" data-services-choice="credit"
+            aria-pressed="false">Кредит</button>
+        </div>
 
         <ul class="services-list">
           <li class="services-item services-item_delivery services-item_active" data-services-type="delivery">
@@ -365,19 +339,13 @@
 
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a href="blank.html" class="footer-social-link" aria-label="facebook">
-              <img src="img/facebook.svg" alt="Логотип facebook" width="32" height="32" class="footer-social-logo" />
-            </a>
+            <a href="blank.html" class="footer-social-link footer-social-link_facebook" aria-label="facebook"></a>
           </li>
           <li class="footer-social-item">
-            <a href="blank.html" class="footer-social-link" aria-label="instagram">
-              <img src="img/instagram.svg" alt="Логотип instagram" width="32" height="32" class="footer-social-logo" />
-            </a>
+            <a href="blank.html" class="footer-social-link footer-social-link_instagram" aria-label="instagram"></a>
           </li>
           <li class="footer-social-item">
-            <a href="blank.html" class="footer-social-link" aria-label="twitter">
-              <img src="img/twitter.svg" alt="Логотип twitter" width="32" height="32" class="footer-social-logo" />
-            </a>
+            <a href="blank.html" class="footer-social-link footer-social-link_twitter" aria-label="twitter"></a>
           </li>
         </ul>
 
